@@ -1,0 +1,214 @@
+[
+  {
+    "key": "cardiology",
+    "name": "<span class=\"en\">Dr. Sahil Sareen</span><span class=\"pa\">ਡਾ. ਸਾਹਿਲ ਸਰੀਨ</span>",
+    "paragraphs": [
+      "<span class=\"en\">Consultant Cardiologist — interventional cardiology</span><span class=\"pa\">ਦਿਲ ਦੇ ਰੋਗਾਂ ਦੇ ਮਾਹਿਰ</span>",
+      "<span class=\"en\">Dr. Sahil Sareen provides specialist evaluation and treatment planning for coronary artery disease, heart failure, structural heart conditions and rhythm disorders.</span><span class=\"pa\">ਦਿਲ ਦੇ ਵਿਭਾਗ ਦੀ ਅਗਵਾਈ ਕਰਦੇ ਹਨ।</span>",
+      "<span class=\"en\">Areas of expertise include coronary artery disease, heart failure, structural heart interventions, pacemaker and ICD therapy, and preventive cardiology. OPD Monday–Saturday, 10:30 AM–3:00 PM, by appointment.</span><span class=\"pa\">ਡਿਗਰੀਆਂ ਦੀ ਜਾਣਕਾਰੀ ਕਾਊਂਟਰ ਤੋਂ ਲਈ ਜਾ ਸਕਦੀ ਹੈ।</span>"
+    ],
+    "treatments": [
+      {
+        "title": "<span class=\"en\">Angiography &amp; angioplasty</span><span class=\"pa\">ਐਂਜੀਓਗ੍ਰਾਫ਼ੀ ਤੇ ਐਂਜੀਓਪਲਾਸਟੀ</span>",
+        "description": "<span class=\"en\">Coronary angiography to see the blockage, and angioplasty with stenting where indicated.</span><span class=\"pa\">ਬੰਦ ਨਾੜੀ ਦੇਖਣ ਲਈ ਐਂਜੀਓਗ੍ਰਾਫ਼ੀ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Coronary artery disease</span><span class=\"pa\">ਰਿਪੋਰਟਾਂ ਉੱਤੇ ਦੂਜੀ ਰਾਏ</span>",
+        "description": "<span class=\"en\">Evaluation may include ECG, echocardiography, stress testing, CT angiography or cardiac catheterisation. Treatment is based on clinical assessment.</span><span class=\"pa\">ਡਾਕਟਰ ਰਿਪੋਰਟਾਂ ਪੜ੍ਹ ਕੇ ਲਿਖਦਾ ਹੈ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Chest discomfort and breathlessness</span><span class=\"pa\">ਛਾਤੀ ਦੇ ਦਰਦ ਦੀ ਜਾਂਚ</span>",
+        "description": "<span class=\"en\">ECG, echo and stress testing to work out whether symptoms are cardiac or something else.</span><span class=\"pa\">ECG, ਈਕੋ ਤੇ ਸਟਰੈੱਸ ਟੈਸਟ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Pacemakers &amp; rhythm</span><span class=\"pa\">ਪੇਸਮੇਕਰ ਤੇ ਧੜਕਣ</span>",
+        "description": "<span class=\"en\">Assessment of palpitations, blackouts and slow rhythms, with pacemaker implantation when indicated.</span><span class=\"pa\">ਧੜਕਣ ਦੀ ਜਾਂਚ, ਪੇਸਮੇਕਰ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Heart failure &amp; follow-up</span><span class=\"pa\">ਦਿਲ ਦੀ ਕਮਜ਼ੋਰੀ</span>",
+        "description": "<span class=\"en\">Medical management, monitoring and review after a heart attack or a procedure.</span><span class=\"pa\">ਦਵਾਈਆਂ ਨਾਲ ਇਲਾਜ ਤੇ ਨਿਗਰਾਨੀ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Risk-factor care</span><span class=\"pa\">ਖ਼ਤਰੇ ਘਟਾਉਣ ਦਾ ਇਲਾਜ</span>",
+        "description": "<span class=\"en\">Preventive cardiology and risk-factor care tailored to your health.</span><span class=\"pa\">ਬੀ.ਪੀ., ਕੋਲੈਸਟਰੋਲ, ਸ਼ੂਗਰ ਦਾ ਇਲਾਜ।</span>"
+      }
+    ],
+    "options": [
+      "ਦੂਜੀ ਰਾਏ / Coronary artery disease / blocked arteries",
+      "ਛਾਤੀ ਦਾ ਦਰਦ / Chest discomfort or breathlessness",
+      "ਬੀ.ਪੀ. / ਕੋਲੈਸਟਰੋਲ / Heart failure or valve condition",
+      "ਪੇਸਮੇਕਰ / Pacemaker or rhythm problem",
+      "ਆਮ ਜਾਂਚ / Preventive cardiology / check-up"
+    ]
+  },
+  {
+    "key": "orthopaedics",
+    "name": "<span class=\"en\">Dr. Shubhang Aggarwal</span><span class=\"pa\" lang=\"pa\">ਡਾ. ਸ਼ੁਭੰਗ ਅਗਰਵਾਲ</span>",
+    "paragraphs": [
+      "<span class=\"en\">Director &amp; Consultant Orthopaedic Surgeon — joint replacement, robotics, trauma</span><span class=\"pa\">ਡਾਇਰੈਕਟਰ ਤੇ ਹੱਡੀਆਂ ਦੇ ਸਰਜਨ</span>",
+      "<span class=\"en\">Practising joint replacement surgery since 2004, with patients travelling from Himachal Pradesh, Jammu &amp; Kashmir and Rajasthan. He introduced computer-navigated joint replacement in Jalandhar and robotic joint replacement at this hospital.</span><span class=\"pa\">2004 ਤੋਂ ਜੋੜ ਬਦਲਣ ਦੀ ਸਰਜਰੀ ਕਰ ਰਹੇ ਹਨ। ਜਲੰਧਰ ਵਿੱਚ ਕੰਪਿਊਟਰ ਨੈਵੀਗੇਸ਼ਨ ਅਤੇ ਇਸ ਹਸਪਤਾਲ ਵਿੱਚ ਰੋਬੋਟਿਕ ਜੋੜ ਬਦਲਣ ਦੀ ਸਰਜਰੀ ਸ਼ੁਰੂ ਕੀਤੀ।</span>",
+      "<span class=\"en\">Ask the desk for his registration details and qualifications at your consultation.</span><span class=\"pa\">ਮੁਲਾਕਾਤ ਸਮੇਂ ਕਾਊਂਟਰ ਤੋਂ ਯੋਗਤਾ ਅਤੇ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਦੀ ਜਾਣਕਾਰੀ ਲਵੋ।</span>"
+    ],
+    "treatments": [
+      {
+        "title": "<span class=\"en\">Total knee replacement</span><span class=\"pa\">ਪੂਰਾ ਗੋਡਾ ਬਦਲਣਾ</span>",
+        "description": "<span class=\"en\">For arthritis that has spread across the whole joint. Planned with robotic assistance.</span><span class=\"pa\">ਰੋਬੋਟ ਦੀ ਮਦਦ ਨਾਲ ਯੋਜਨਾ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Half knee replacement</span><span class=\"pa\">ਅੱਧਾ ਗੋਡਾ ਬਦਲਣਾ</span>",
+        "description": "<span class=\"en\">When only one compartment is worn, the healthy part of the knee and ligaments are left alone.</span><span class=\"pa\">ਸਿਰਫ਼ ਇੱਕ ਹਿੱਸਾ ਬਦਲਿਆ ਜਾਂਦਾ ਹੈ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Total hip replacement</span><span class=\"pa\">ਪੂਰਾ ਚੂਲਾ ਬਦਲਣਾ</span>",
+        "description": "<span class=\"en\">Planned in 3D before the operation, so implant size and position match your own anatomy.</span><span class=\"pa\">ਆਪਰੇਸ਼ਨ ਤੋਂ ਪਹਿਲਾਂ 3D ਯੋਜਨਾ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Sports injuries &amp; arthroscopy</span><span class=\"pa\">ਖੇਡਾਂ ਦੀਆਂ ਸੱਟਾਂ</span>",
+        "description": "<span class=\"en\">Ligament and cartilage injuries treated through keyhole surgery, with a structured return to activity.</span><span class=\"pa\">ਦੂਰਬੀਨ ਸਰਜਰੀ ਨਾਲ ਇਲਾਜ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Trauma &amp; fracture care</span><span class=\"pa\">ਹਾਦਸੇ ਤੇ ਹੱਡੀ ਟੁੱਟਣ</span>",
+        "description": "<span class=\"en\">Fractures and revision surgery, supported by 24-hour imaging and 45 critical care beds.</span><span class=\"pa\">24 ਘੰਟੇ ਸਕੈਨ ਤੇ 45 ICU ਬਿਸਤਰੇ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Children's orthopaedics &amp; scoliosis</span><span class=\"pa\">ਬੱਚਿਆਂ ਦੀਆਂ ਹੱਡੀਆਂ</span>",
+        "description": "<span class=\"en\">Growth-related bone and joint problems, and assessment of spinal curves in children and teenagers.</span><span class=\"pa\">ਬੱਚਿਆਂ ਵਿੱਚ ਰੀੜ੍ਹ ਦੀ ਟੇਢ ਦੀ ਜਾਂਚ।</span>"
+      }
+    ],
+    "options": [
+      "ਗੋਡੇ ਦਾ ਦਰਦ / Knee pain / arthritis",
+      "ਚੂਲੇ ਦਾ ਦਰਦ / Hip pain",
+      "ਦੂਜੀ ਰਾਏ / Advised knee replacement — want a review",
+      "ਖੇਡ ਸੱਟ / Sports or ligament injury",
+      "ਹੱਡੀ ਟੁੱਟਣ / Fracture or trauma follow-up",
+      "ਬੱਚੇ ਦੀ ਸਮੱਸਿਆ / Child's bone or spine problem"
+    ]
+  },
+  {
+    "key": "urology",
+    "name": "<span class=\"en\">Dr. Satinder Pal Aggarwal</span><span class=\"pa\">ਡਾ. ਸਤਿੰਦਰ ਪਾਲ ਅਗਰਵਾਲ</span>",
+    "paragraphs": [
+      "<span class=\"en\">Urologist &amp; Kidney Transplant Surgeon</span><span class=\"pa\">ਪਿਸ਼ਾਬ ਰੋਗ ਮਾਹਿਰ ਤੇ ਗੁਰਦਾ ਟਰਾਂਸਪਲਾਂਟ ਸਰਜਨ</span>",
+      "<span class=\"en\">Dr. Satinder Pal Aggarwal is a urologist at NHS Hospital, Jalandhar. His qualifications are MS, M.Ch (Urology).</span><span class=\"pa\">ਉਹ NHS ਹਸਪਤਾਲ ਵਿੱਚ ਯੂਰੋਲੋਜਿਸਟ ਹਨ।</span>",
+      "<span class=\"en\">OPD Monday–Saturday, 10:30 AM–3:00 PM, by appointment.</span><span class=\"pa\">OPD ਸੋਮਵਾਰ–ਸ਼ਨੀਵਾਰ, ਸਵੇਰੇ 10:30–ਦੁਪਹਿਰ 3:00, ਮੁਲਾਕਾਤ ਨਾਲ।</span>"
+    ],
+    "treatments": [
+      {
+        "title": "<span class=\"en\">Kidney stone procedures: PCNL, RIRS & URS</span><span class=\"pa\">ਪੱਥਰੀ ਲਈ ਹੋਲਮੀਅਮ ਲੇਜ਼ਰ</span>",
+        "description": "<span class=\"en\">Options include PCNL, RIRS and ureteroscopy (URS), alongside medical management. The recommended approach depends on stone size and location.</span><span class=\"pa\">PCNL, RIRS, URS ਅਤੇ ਦਵਾਈ ਨਾਲ ਇਲਾਜ ਦੇ ਵਿਕਲਪ; ਢੁੱਕਵਾਂ ਤਰੀਕਾ ਪੱਥਰੀ ਦੇ ਆਕਾਰ ਤੇ ਥਾਂ ਉੱਤੇ ਨਿਰਭਰ ਕਰਦਾ ਹੈ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">RIRS &amp; URS</span><span class=\"pa\">RIRS ਤੇ URS</span>",
+        "description": "<span class=\"en\">Flexible or rigid endoscopy up to the kidney or ureter for stones that cannot be reached from outside.</span><span class=\"pa\">ਗੁਰਦੇ ਜਾਂ ਨਾਲੀ ਤੱਕ ਦੂਰਬੀਨ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">PCNL</span><span class=\"pa\">PCNL</span>",
+        "description": "<span class=\"en\">For large or hard kidney stones, removed through a small tract instead of open surgery.</span><span class=\"pa\">ਵੱਡੀ ਪੱਥਰੀ ਲਈ ਛੋਟੇ ਰਸਤੇ ਰਾਹੀਂ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">HoLEP for the prostate</span><span class=\"pa\">ਪ੍ਰੋਸਟੇਟ ਲਈ HoLEP</span>",
+        "description": "<span class=\"en\">Laser enucleation for an enlarged prostate that is restricting the urine stream.</span><span class=\"pa\">ਵਧੇ ਪ੍ਰੋਸਟੇਟ ਲਈ ਲੇਜ਼ਰ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Laparoscopic urology &amp; reconstruction</span><span class=\"pa\">ਦੂਰਬੀਨ ਸਰਜਰੀ</span>",
+        "description": "<span class=\"en\">Listed procedures include nephrectomy, pyeloplasty, pyelolithotomy, VVF repair, ureteric reimplant and urethroplasty.</span><span class=\"pa\">ਨੇਫ੍ਰੈਕਟੋਮੀ, ਪਾਇਲੋਪਲਾਸਟੀ, VVF ਮੁਰੰਮਤ ਅਤੇ ਯੂਰੇਥ੍ਰੋਪਲਾਸਟੀ ਵਰਗੀਆਂ ਪ੍ਰਕਿਰਿਆਵਾਂ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Prostate and uro-oncology procedures</span><span class=\"pa\">ਜਦੋਂ ਆਪਰੇਸ਼ਨ ਦੀ ਲੋੜ ਨਹੀਂ</span>",
+        "description": "<span class=\"en\">NHS lists HoLEP and TURP for prostate conditions, and surgical procedures for kidney, bladder, prostate, penile and testicular cancers.</span><span class=\"pa\">HoLEP ਤੇ TURP ਅਤੇ ਗੁਰਦੇ, ਬਲੈਡਰ, ਪ੍ਰੋਸਟੇਟ, ਲਿੰਗ ਅਤੇ ਅੰਡਕੋਸ਼ ਦੇ ਕੈਂਸਰ ਲਈ ਸਰਜਰੀ।</span>"
+      }
+    ],
+    "options": [
+      "ਗੁਰਦੇ ਦੀ ਪੱਥਰੀ / Kidney stone",
+      "ਵਧਿਆ ਪ੍ਰੋਸਟੇਟ / Enlarged prostate",
+      "ਪਿਸ਼ਾਬ ਵਿੱਚ ਖ਼ੂਨ / Blood in urine",
+      "ਵਾਰ-ਵਾਰ ਇਨਫੈਕਸ਼ਨ / Repeated urine infections",
+      "ਦੂਜੀ ਰਾਏ / Kidney stones / prostate / urinary concerns"
+    ]
+  },
+  {
+    "key": "nephrology",
+    "name": "<span class=\"en\">Dr. Sanjay Kumar Sharma</span><span class=\"pa\">ਡਾ. ਸੰਜੇ ਕੁਮਾਰ ਸ਼ਰਮਾ</span>",
+    "paragraphs": [
+      "<span class=\"en\">Consultant Nephrologist — dialysis, critical care nephrology, glomerular disease</span><span class=\"pa\">ਗੁਰਦੇ ਰੋਗਾਂ ਦੇ ਮਾਹਿਰ</span>",
+      "<span class=\"en\">Runs the kidney service, from first review of an abnormal blood test through to long-term dialysis, with intensive care and urology support on the same campus.</span><span class=\"pa\">ਗੁਰਦੇ ਦੇ ਵਿਭਾਗ ਦੀ ਅਗਵਾਈ ਕਰਦੇ ਹਨ।</span>",
+      "<span class=\"en\">Qualifications and registration details are available at the desk on request.</span><span class=\"pa\">ਡਿਗਰੀਆਂ ਦੀ ਜਾਣਕਾਰੀ ਕਾਊਂਟਰ ਤੋਂ।</span>"
+    ],
+    "treatments": [
+      {
+        "title": "<span class=\"en\">Maintenance haemodialysis</span><span class=\"pa\">ਨਿਯਮਿਤ ਡਾਇਲਸਿਸ</span>",
+        "description": "<span class=\"en\">Regular dialysis sessions on scheduled slots, with the same nursing team each visit.</span><span class=\"pa\">ਤੈਅ ਸਮੇਂ ਉੱਤੇ ਡਾਇਲਸਿਸ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Critical care nephrology</span><span class=\"pa\">ICU ਵਿੱਚ ਗੁਰਦੇ ਦਾ ਇਲਾਜ</span>",
+        "description": "<span class=\"en\">Dialysis and kidney support for unstable patients inside the intensive care unit.</span><span class=\"pa\">ICU ਦੇ ਅੰਦਰ ਡਾਇਲਸਿਸ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Renal biopsy &amp; diagnosis</span><span class=\"pa\">ਗੁਰਦੇ ਦੀ ਬਾਇਓਪਸੀ</span>",
+        "description": "<span class=\"en\">Biopsy and workup to find the cause of protein in urine, swelling or falling kidney function.</span><span class=\"pa\">ਬਾਇਓਪਸੀ ਤੇ ਟੈਸਟ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Access &amp; catheter care</span><span class=\"pa\">ਨਾੜੀ ਤੇ ਕੈਥੀਟਰ ਦੀ ਸੰਭਾਲ</span>",
+        "description": "<span class=\"en\">Creating and looking after dialysis access, and dealing with catheter problems and infections.</span><span class=\"pa\">ਨਾੜੀ ਬਣਾਉਣਾ ਤੇ ਸੰਭਾਲਣਾ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Long-term kidney disease</span><span class=\"pa\">ਲੰਮੇ ਸਮੇਂ ਦਾ ਗੁਰਦਾ ਰੋਗ</span>",
+        "description": "<span class=\"en\">Slowing progression where possible — blood pressure, diabetes, diet and medicine review each visit.</span><span class=\"pa\">ਹਰ ਮੁਲਾਕਾਤ ਵਿੱਚ ਜਾਂਚ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Working with urology</span><span class=\"pa\">ਪਿਸ਼ਾਬ ਰੋਗ ਵਿਭਾਗ ਨਾਲ ਮਿਲ ਕੇ</span>",
+        "description": "<span class=\"en\">Stones, obstruction and transplant assessment discussed jointly with the urology team on site.</span><span class=\"pa\">ਪੱਥਰੀ ਤੇ ਟਰਾਂਸਪਲਾਂਟ ਦੀ ਜਾਂਚ ਇੱਥੇ ਹੀ।</span>"
+      }
+    ],
+    "options": [
+      "ਨਿਯਮਿਤ ਡਾਇਲਸਿਸ / Regular dialysis slot",
+      "ਕਰੀਏਟੀਨਿਨ ਵੱਧ / High creatinine / kidney review",
+      "ਸੋਜ, ਪ੍ਰੋਟੀਨ / Swelling, protein in urine",
+      "ਡਾਇਲਸਿਸ ਨਾੜੀ ਦੀ ਸਮੱਸਿਆ / Dialysis access problem",
+      "ਦੂਜੀ ਰਾਏ / Second opinion on kidney treatment"
+    ]
+  },
+  {
+    "key": "gastroenterology",
+    "name": "<span class=\"en\">Dr. Anuj Arora</span><span class=\"pa\">ਡਾ. ਅਨੁਜ ਅਰੋੜਾ</span>",
+    "paragraphs": [
+      "<span class=\"en\">Consultant Gastroenterologist — therapeutic endoscopy, liver disease</span><span class=\"pa\">ਪੇਟ ਤੇ ਜਿਗਰ ਰੋਗਾਂ ਦੇ ਮਾਹਿਰ</span>",
+      "<span class=\"en\">Leads the digestive sciences service: diagnostic and therapeutic endoscopy, ERCP, endoscopic ultrasound, and the management of fatty liver, hepatitis, cirrhosis and pancreatitis.</span><span class=\"pa\">ਪਾਚਣ ਵਿਭਾਗ ਦੀ ਅਗਵਾਈ।</span>",
+      "<span class=\"en\">Qualifications and registration details are available at the desk on request.</span><span class=\"pa\">ਡਿਗਰੀਆਂ ਦੀ ਜਾਣਕਾਰੀ ਕਾਊਂਟਰ ਤੋਂ।</span>"
+    ],
+    "treatments": [
+      {
+        "title": "<span class=\"en\">Endoscopy &amp; colonoscopy</span><span class=\"pa\">ਐਂਡੋਸਕੋਪੀ ਤੇ ਕੋਲਨੋਸਕੋਪੀ</span>",
+        "description": "<span class=\"en\">Upper GI endoscopy and colonoscopy for acidity, bleeding, ulcers, polyps and unexplained symptoms.</span><span class=\"pa\">ਪੇਟ ਦੀ ਦੂਰਬੀਨ ਜਾਂਚ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">FibroScan</span><span class=\"pa\">ਫ਼ਾਈਬਰੋਸਕੈਨ</span>",
+        "description": "<span class=\"en\">A painless scan that measures liver stiffness and fat — no needle, result the same day.</span><span class=\"pa\">ਬਿਨਾਂ ਦਰਦ ਸਕੈਨ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">ERCP &amp; bile duct work</span><span class=\"pa\">ERCP ਤੇ ਪਿੱਤ ਦੀ ਨਾਲੀ</span>",
+        "description": "<span class=\"en\">Endoscopic treatment of bile duct stones, blockages and strictures.</span><span class=\"pa\">ਪਿੱਤ ਦੀ ਨਾਲੀ ਦਾ ਦੂਰਬੀਨ ਇਲਾਜ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Liver care</span><span class=\"pa\">ਜਿਗਰ ਦਾ ਇਲਾਜ</span>",
+        "description": "<span class=\"en\">Fatty liver and NASH, hepatitis, cirrhosis and jaundice, followed up with imaging and blood work on site.</span><span class=\"pa\">ਚਰਬੀ ਵਾਲਾ ਜਿਗਰ, ਹੈਪੇਟਾਈਟਸ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Laser treatment for piles</span><span class=\"pa\">ਬਵਾਸੀਰ ਦਾ ਲੇਜ਼ਰ ਇਲਾਜ</span>",
+        "description": "<span class=\"en\">Piles, fissure, fistula and pilonidal sinus treated with laser techniques in suitable cases.</span><span class=\"pa\">ਢੁਕਵੇਂ ਕੇਸਾਂ ਵਿੱਚ ਲੇਜ਼ਰ ਇਲਾਜ।</span>"
+      },
+      {
+        "title": "<span class=\"en\">Weight &amp; metabolic care</span><span class=\"pa\">ਭਾਰ ਤੇ ਪਾਚਣ ਦਾ ਇਲਾਜ</span>",
+        "description": "<span class=\"en\">Gastric balloon and medically supervised weight management, with dietetics in the same building.</span><span class=\"pa\">ਗੈਸਟ੍ਰਿਕ ਬੈਲੂਨ ਤੇ ਭਾਰ ਘਟਾਉਣਾ।</span>"
+      }
+    ],
+    "options": [
+      "ਤੇਜ਼ਾਬ, ਦਰਦ / Acidity, pain or bloating",
+      "ਚਰਬੀ ਵਾਲਾ ਜਿਗਰ / Fatty liver / abnormal tests",
+      "ਪੀਲੀਆ / Jaundice",
+      "ਬਵਾਸੀਰ / Piles, fissure or fistula",
+      "ਐਂਡੋਸਕੋਪੀ ਦੀ ਸਲਾਹ / Endoscopy or colonoscopy advised",
+      "ਭਾਰ ਦੀ ਸਮੱਸਿਆ / Weight and metabolic problems"
+    ]
+  }
+]
