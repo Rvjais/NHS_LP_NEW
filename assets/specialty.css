@@ -85,7 +85,7 @@
 .specialty-services .section-heading{justify-content:center;text-align:center;margin-bottom:18px}
 .specialty-page .specialty-services h2{font-size:28px}
 .specialty-services .eyebrow{font-size:11px;margin-bottom:7px}
-.specialty-page .services{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;border:0;background:none;overflow:visible}
+.specialty-page .services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;border:0;background:none;overflow:visible}
 .specialty-page .service-card,.specialty-page .service-card:nth-child(n){padding:20px 15px 16px;border:1px solid #e9edf2;border-radius:10px;background:#fff;text-align:center;align-items:center;box-shadow:0 1px 6px #071f3d05}
 .specialty-page .service-card::before{display:none}
 .specialty-page .service-card>.specialty-icon{color:var(--accent);width:40px;height:40px;margin-bottom:12px}
