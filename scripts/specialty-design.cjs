@@ -1,6 +1,18 @@
 // Shared reference-inspired specialty layout; content and forms originate in redesign.cjs.
 const specialties = require('./specialty-content.cjs');
+const fs = require('node:fs');
+const path = require('node:path');
 const B = (en, pa) => `<span class="en">${en}</span><span class="pa" lang="pa">${pa}</span>`;
+const legalMain = fs.readFileSync(path.join(__dirname,'../privacy.html'),'utf8').match(/<main\b[^>]*>([\s\S]*?)<\/main>/)[1];
+const legalContent = {
+ privacy: legalMain.slice(0,legalMain.indexOf('<hr')),
+ terms: legalMain.slice(legalMain.indexOf('<h1 id="terms"')),
+};
+const legalDialogs = Object.entries(legalContent).map(([key,html])=>{
+ const title = key==='privacy'?B('Privacy policy','ਪ੍ਰਾਈਵੇਸੀ ਪਾਲਿਸੀ'):B('Terms &amp; conditions','ਨਿਯਮ ਅਤੇ ਸ਼ਰਤਾਂ');
+ const content = html.replace(/<h1\b[^>]*>[\s\S]*?<\/h1>/,'').replace(/ style="[^"]*"/g,'').replace(/<h2>/g,'<h3>').replace(/<\/h2>/g,'</h3>');
+ return `<dialog class="specialty-legal-dialog" id="${key}" aria-labelledby="${key}-title"><div class="specialty-legal-header"><h2 id="${key}-title">${title}</h2><button type="button" data-close-legal aria-label="Close">&times;</button></div><div class="specialty-legal-content" lang="en">${content}</div></dialog>`;
+}).join('');
 const paths = {
  heart: '<path d="M20 7c-4-5-10-2-10 3 0 6 10 12 10 12s10-6 10-12c0-5-6-8-10-3Z"/>',
  pulse: '<path d="M3 20h8l3-7 4 15 4-20 4 12h11"/>',
@@ -70,11 +82,16 @@ module.exports = function specialtyDesign(base, c) {
  base = base.replace('<link rel="stylesheet" href="../assets/landing.css">', '<link rel="stylesheet" href="../assets/landing.css"><link rel="stylesheet" href="../assets/specialty.css">');
  base = base.replace(/<div class="utility">[\s\S]*?<\/div><\/div>/, `<div class="utility"><div class="shell"><span class="specialty-utility-message">${icon(s.icon)}${B(c.key==='cardiology'?'Compassionate care. Advanced solutions. Healthier hearts.':'Compassionate care. Advanced solutions. Better health.', 'ਮਾਹਿਰਾਂ ਦੀ ਸਲਾਹ। ਤੁਹਾਡੇ ਲਈ ਦੇਖਭਾਲ।')}</span><div class="specialty-utility-contact"><a href="tel:+911814633333">${icon('phone')}0181-4633333</a><a href="#hospital">${icon('pin')}${B('Kapurthala Chowk, Jalandhar', 'ਕਪੂਰਥਲਾ ਚੌਕ, ਜਲੰਧਰ')}</a></div></div></div>`);
  base = base.replace(/<header>[\s\S]*?<\/header>/, `<header class="specialty-header"><div class="shell navigation">
-  <a class="specialty-brand" href="../" aria-label="NHS Hospital home"><span class="brand"><img src="../assets/logo.png" alt="NHS Hospital"></span><span class="specialty-brand-copy"><small>${B('Specialist care', 'ਮਾਹਿਰਾਂ ਦੀ ਦੇਖਭਾਲ')}</small><strong>${B(s.title,s.titlePa)}</strong></span></a>
+  <a class="specialty-brand" href="#main" aria-label="NHS Hospital — back to top"><span class="brand"><img src="../assets/logo.png" alt="NHS Hospital"></span><span class="specialty-brand-copy"><small>${B('Specialist care', 'ਮਾਹਿਰਾਂ ਦੀ ਦੇਖਭਾਲ')}</small><strong>${B(s.title,s.titlePa)}</strong></span></a>
   <nav aria-label="Main navigation"><a class="specialty-home-link" href="#main" aria-current="location">${B('Home', 'ਮੁੱਖ ਪੰਨਾ')}</a><a href="#treatments">${B('Treatments', 'ਇਲਾਜ')}</a><a href="#doctor">${B('<span class="nav-label-full">Your specialist</span><span class="nav-label-short">Doctor</span>', 'ਮਾਹਿਰ')}</a><a href="#hospital">${B('<span class="nav-label-full">Our hospital</span><span class="nav-label-short">Hospital</span>', 'ਹਸਪਤਾਲ')}</a></nav>
   <div class="nav-actions"><div class="language" role="group" aria-label="Choose language"><button type="button" data-language="en" aria-pressed="true" aria-label="English">EN</button><button type="button" data-language="pa" aria-pressed="false" aria-label="ਪੰਜਾਬੀ" lang="pa">ਪੰ</button></div><a class="button primary specialty-nav-book" href="#hero-form">${icon('calendar')}${B('<span class="nav-label-full">Book a visit</span><span class="nav-label-short">Book visit</span>', 'ਮੁਲਾਕਾਤ')}${icon('arrow')}</a></div>
  </div></header>`);
  base = base.replace('<div class="visit-note">', `<p class="specialty-expertise">${c.paragraphs[2]}</p><div class="visit-note">`);
+ base = base.replace('<a class="brand footer-brand" href="../">','<a class="brand footer-brand" href="#main" aria-label="NHS Hospital — back to top">');
+ base = base.replace(/<div><h3><span class="en">Explore our care<\/span>[\s\S]*?<\/div>/, `<div><h3>${B('On this page','ਇਸ ਪੰਨੇ ਉੱਤੇ')}</h3><a href="#treatments">${B('Treatments','ਇਲਾਜ')}</a><a href="#doctor">${B('Your specialist','ਤੁਹਾਡਾ ਮਾਹਿਰ')}</a><a href="#hospital">${B('Our hospital','ਸਾਡਾ ਹਸਪਤਾਲ')}</a><a href="#hero-form">${B('Request a callback','ਕਾਲ ਲਈ ਬਿਨਤੀ')}</a><a href="#faq">${B('Frequently asked questions','ਆਮ ਸਵਾਲ')}</a></div>`);
+ base = base.replace(/<a class="text-link" href="https:\/\/wa\.me\/[^\"]*"[^>]*>[\s\S]*?<\/a>/, `<a class="text-link" href="#hero-form">${B('Request a callback','ਕਾਲ ਲਈ ਬਿਨਤੀ')}${icon('arrow')}</a>`);
+ base = base.replaceAll('href="../privacy.html#privacy"','href="#privacy"').replaceAll('href="../privacy.html#terms"','href="#terms"');
+ base = base.replace('</body>',`${legalDialogs}<script src="../assets/specialty-navigation.js" defer></script></body>`);
  base = base.replace(`class="${c.key}-page"`, `class="${c.key}-page specialty-page"`);
  return base;
 };

@@ -220,4 +220,15 @@
 }
 @media(max-width:600px){.specialty-page .specialty-lead-columns{order:3;margin-top:-10px;gap:16px}}
 @media(max-width:600px){.specialty-page .faq-section{gap:18px}.specialty-page .faqs{padding-inline:16px}}
+/* Existing legal notices open locally without leaving the landing page. */
+.specialty-legal-dialog{width:min(760px,calc(100% - 32px));max-height:85dvh;padding:0;border:1px solid #e2e8f0;border-radius:16px;background:#fff;color:#071f3d;box-shadow:0 25px 90px #061f3e40}
+.specialty-legal-dialog::backdrop{background:#061f3eb3;backdrop-filter:blur(4px)}
+.specialty-legal-header{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 26px;border-bottom:1px solid #e2e8f0;background:#fff;z-index:1}
+.specialty-page .specialty-legal-header h2{font-size:28px}
+.specialty-legal-header button{width:38px;height:38px;flex-shrink:0;border:1px solid #e2e8f0;border-radius:50%;background:#f8fafc;color:#071f3d;font-size:26px;line-height:1}
+.specialty-legal-content{padding:8px 26px 26px;font-size:15px;line-height:1.75}
+.specialty-legal-content p{margin-top:14px}
+.specialty-legal-content h3{font-family:var(--body);font-size:19px;font-weight:700;margin-top:24px}
+.specialty-legal-content a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:600px){.specialty-legal-header{padding:17px 18px}.specialty-page .specialty-legal-header h2{font-size:24px}.specialty-legal-content{padding-inline:18px}}
 @media(prefers-reduced-motion:reduce){.specialty-page .hero-copy>*{animation:none}}

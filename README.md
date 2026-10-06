@@ -26,3 +26,5 @@ The checks verify page structure, local assets, links, anchors, form endpoints a
 Each page has a compact form in the hero and a longer form farther down. Both POST to the existing Formester endpoint and use the existing thank-you redirect. They request a callback rather than confirming a booking. The Indian mobile field requires a valid 10-digit number and explicit contact consent.
 
 Phone, email, WhatsApp and privacy links use the existing hospital contact details. End-to-end external form submission is not part of the local checks.
+
+On specialty pages, both logos and navigation links stay within the current page. Footer links point to the page's sections, the WhatsApp website link is replaced by a callback link, and the existing privacy policy and terms open in local dialogs. Phone and email actions remain available, along with the existing enquiry submission service.
