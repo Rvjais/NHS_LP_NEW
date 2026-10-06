@@ -2,7 +2,9 @@
 
 The hospital home page and five specialty landing pages are static HTML, with shared styling in `assets/landing.css` and language switching in `assets/landing.js`. No build dependencies are required to serve them.
 
-`cardiology/index.html` provides the cardiology path alongside `cardiology-treatment/index.html`.
+Each specialty is available at both URL paths, such as `cardiology/index.html` and `cardiology-treatment/index.html`. Both versions render the same page.
+
+All five specialties use the reference layout with NHS gold and navy branding in `scripts/specialty-design.cjs` and the scoped `assets/specialty.css`. Specialty headings, visual themes, and service icons are configured in `scripts/specialty-content.cjs`. Each has a generated illustrative hero: a heart, knee joint, urinary system, kidneys, or digestive organs. Specialist profiles use the hospital's existing doctor photographs.
 
 ## Update the pages
 
@@ -17,7 +19,7 @@ node scripts/check-pages.cjs
 
 The checks verify page structure, local assets, links, anchors, form endpoints and language switching.
 
-`scripts/browser-check.cjs` connects to an isolated headless Chrome instance on local debugging port 9223. It checks all routes at 320, 390, 768 and 1440 pixels, Punjabi overflow, image loading, native form validation and FAQ interactions. It saves desktop, mobile and full-page cardiology renders in `.preview/`, then closes that browser instance. No form is submitted.
+`scripts/browser-check.cjs` connects to an isolated headless Chrome instance on local debugging port 9223. It checks all routes at 320, 390, 768 and 1440 pixels, Punjabi overflow, image loading, native form validation and FAQ interactions. It saves desktop, mobile, hero and full-page renders for every specialty in `.preview/`, then closes that browser instance. No form is submitted.
 
 ## Appointment enquiries
 

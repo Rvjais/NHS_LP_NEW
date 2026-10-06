@@ -114,6 +114,9 @@ nav{font-size:14px}.language button{font-size:12px}
 .hero-consent input{width:15px;height:15px;margin:2px 0 0;accent-color:var(--ink);flex-shrink:0}
 .hero-consent a{text-decoration:underline;text-underline-offset:2px;color:var(--ink)}
 @media(prefers-reduced-motion:no-preference){.hero-form{animation:hero-enter .85s cubic-bezier(.2,.75,.2,1) both;animation-delay:.4s}}
+/* Footer logos use their full intrinsic proportions rather than the header crop. */
+footer .footer-brand{width:180px;height:auto;overflow:visible;background:transparent;border-radius:0;margin-bottom:8px}
+footer .footer-brand img{position:static;inset:auto;width:100%;max-width:100%;height:auto;object-fit:contain}
 @media(max-width:1100px){.hero-form-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-form .button{width:100%}}
 @media(max-width:800px){.hero-form{margin-top:0;padding:22px}.hero-form-heading h2{font-size:23px}.hero-form-heading p{font-size:12px}}
 @media(max-width:600px){.hero-grid>.hero-form{order:2}.hero-grid>.hero-visual{order:3}.hero-form{padding:20px 18px;margin-top:0}.hero-form-heading{align-items:flex-start;flex-direction:column;gap:4px;margin-bottom:16px}.hero-form-heading h2{font-size:24px}.hero-form-heading p{text-align:left;font-size:13px}.hero-form-fields{grid-template-columns:1fr;gap:12px}.hero-field{font-size:14px}.hero-field input,.hero-field select,.hero-phone-input{height:50px;font-size:16px}.hero-form .button{height:50px;font-size:14px}.hero-consent{font-size:12px;margin-top:15px}.hero-visual{margin-top:4px}}

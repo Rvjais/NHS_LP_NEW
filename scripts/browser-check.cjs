@@ -15,7 +15,8 @@ async function main() {
  const send=(method,params={})=>new Promise((resolve,reject)=>{const next=++id;pending.set(next,{resolve,reject});socket.send(JSON.stringify({id:next,method,params}));});
  const evaluate=async expression=>(await send('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true})).result.value;
  await send('Page.enable');
- const routes=['cardiology-treatment','orthopaedics-treatment','urology-treatment','nephrology-treatment','gastroenterology-treatment','cardiology',''];
+ const specialtyKeys=['cardiology','orthopaedics','urology','nephrology','gastroenterology'];
+ const routes=[...specialtyKeys.map(key=>key+'-treatment'),...specialtyKeys,''];
  const failures=[];
  for(const route of routes){
   for(const width of [320,390,768,1440]){
@@ -33,18 +34,26 @@ async function main() {
    const type=await evaluate(`(()=>{const size=s=>parseFloat(getComputedStyle(document.querySelector(s)).fontSize);return {hero:size('.hero-description'),card:size('.service-card p'),form:size('.appointment-form>label:not(.consent)'),faq:size('.faqs summary')}})()`);
    if(type.hero<15||type.card<14||type.form<14||type.faq<15)failures.push({route,width,type});
    console.log(`${route||'home'} @ ${width}px: ${state.scroll<=width?'fits':'OVERFLOW '+state.scroll}`);
-   if(route==='cardiology-treatment'&&(width===390||width===1440)){
+   if(route.endsWith('-treatment')&&(width===390||width===1440)){
+    const key=route.replace('-treatment','');
     await delay(1000);
     const shot=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});
-    fs.writeFileSync(path.join(preview,`cardiology-${width===390?'mobile':'desktop'}.png`),Buffer.from(shot.data,'base64'));
+    fs.writeFileSync(path.join(preview,`${key}-${width===390?'mobile':'desktop'}.png`),Buffer.from(shot.data,'base64'));
     const heroHeight=await evaluate(`Math.ceil(document.querySelector('.hero').getBoundingClientRect().bottom+16)`);
     const heroShot=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,clip:{x:0,y:0,width,height:heroHeight,scale:1}});
-    fs.writeFileSync(path.join(preview,`cardiology-hero-${width===390?'mobile':'desktop'}.png`),Buffer.from(heroShot.data,'base64'));
+    fs.writeFileSync(path.join(preview,`${key}-hero-${width===390?'mobile':'desktop'}.png`),Buffer.from(heroShot.data,'base64'));
+    if(width===1440){
+     await evaluate(`document.querySelectorAll('.reveal').forEach(el=>el.classList.add('is-visible'))`);
+     await delay(800);
+     const metrics=await send('Page.getLayoutMetrics');
+     const fullPage=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,clip:{x:0,y:0,width,height:metrics.cssContentSize.height,scale:1}});
+     fs.writeFileSync(path.join(preview,`${key}-full.png`),Buffer.from(fullPage.data,'base64'));
+    }
    }
-   if(width===390){
+   if(width===390||width===768){
     await evaluate(`document.querySelector('[data-language="pa"]').click()`);
     const pa=await evaluate(`({lang:document.documentElement.lang,width:document.documentElement.scrollWidth})`);
-    if(pa.lang!=='pa'||pa.width>391)failures.push({route,punjabi:pa});
+    if(pa.lang!=='pa'||pa.width>width+1)failures.push({route,width,punjabi:pa});
     await evaluate(`document.querySelector('[data-language="en"]').click()`);
    }
   }

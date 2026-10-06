@@ -5,7 +5,7 @@ const root=path.join(__dirname,'..');
 const content=require('../landing-content.json');
 let failures=[];
 for(const c of content){console.log(`${c.key}: ${c.paragraphs.length} specialist paragraphs, ${c.treatments.length} treatments, ${c.options.length} form options`);if(!c.paragraphs.length||!c.treatments.length||!c.options.length)failures.push(`${c.key}: missing content`);}
-for(const file of ['index.html',...content.map(c=>`${c.key}-treatment/index.html`),'cardiology/index.html']){
+for(const file of ['index.html',...content.flatMap(c=>[`${c.key}-treatment/index.html`,`${c.key}/index.html`])]){
  const s=fs.readFileSync(path.join(root,file),'utf8');const ids=[...s.matchAll(/\sid="([^"]+)"/g)].map(m=>m[1]);
  if(new Set(ids).size!==ids.length)failures.push(`${file}: duplicate IDs`);
  for(const m of s.matchAll(/(?:href|src)="([^"]+)"/g)){
@@ -21,20 +21,21 @@ for(const file of ['index.html',...content.map(c=>`${c.key}-treatment/index.html
   for(const name of ['patient_name','mobile','problem','department','_redirect','consent'])if(!form.includes(`name="${name}"`))failures.push(`${file}: missing ${name} in a form`);
  }
  if(s.includes('{{'))failures.push(`${file}: unresolved template`);
- if((s.match(/<h1>/g)||[]).length!==1)failures.push(`${file}: expected one h1`);
+ if((s.match(/<h1\b[^>]*>/g)||[]).length!==1)failures.push(`${file}: expected one h1`);
  const stack=[];const voidTags=new Set(['area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr']);
  for(const m of s.matchAll(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi)){
-  const tag=m[1].toLowerCase();if(voidTags.has(tag))continue;
+  const tag=m[1].toLowerCase();if(voidTags.has(tag)||m[0].endsWith('/>'))continue;
   if(m[0].startsWith('</')){const previous=stack.pop();if(previous!==tag)failures.push(`${file}: invalid nesting, closing ${tag} after ${previous}`);}else stack.push(tag);
  }
  if(stack.length)failures.push(`${file}: unclosed tags ${stack.join(',')}`);
  console.log(`${file}: checked assets, links, form endpoint and anchors`);
 }
-for(const c of content.filter(c=>c.key!=='cardiology')){
- const oldPath=path.join(root,c.key,'index.html');
- const legacy=fs.readFileSync(oldPath,'utf8');
- if(!legacy.includes(`../${c.key}-treatment/`))failures.push(`${c.key}: legacy URL does not point to redesigned page`);
- if(!fs.existsSync(path.join(root,c.key,'thank-you.html')))failures.push(`${c.key}: missing thank-you page`);
+for(const c of content){
+ const alias=fs.readFileSync(path.join(root,c.key,'index.html'),'utf8');
+ const treatment=fs.readFileSync(path.join(root,c.key+'-treatment','index.html'),'utf8');
+ if(alias!==treatment)failures.push(`${c.key}: specialty URL variants differ`);
+ if(!alias.includes('specialty-page')||!alias.includes('../assets/specialty.css'))failures.push(`${c.key}: missing reference design`);
+ if(c.key!=='cardiology'&&!fs.existsSync(path.join(root,c.key,'thank-you.html')))failures.push(`${c.key}: missing thank-you page`);
 }
 const buttons=['en','pa'].map(language=>({dataset:{language},setAttribute(k,v){this[k]=v;},addEventListener(k,fn){this[k]=fn;}}));
 const input={getAttribute(k){return k.endsWith('pa')?'ਪੂਰਾ ਨਾਂ':'Your full name';}};

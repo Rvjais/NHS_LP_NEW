@@ -1,6 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const root = path.join(__dirname, '..');
+const specialtyDesign = require('./specialty-design.cjs');
 const B = (en, pa) => `<span class="en">${en}</span><span class="pa" lang="pa">${pa}</span>`;
 const arrow = '<span aria-hidden="true">↗</span>';
 const definitions = [
@@ -54,15 +55,12 @@ ${specialist}
 <div class="emergency-note shell"><span class="emergency-cross" aria-hidden="true">✚</span><p><strong>${B('Need urgent care?','ਤੁਰੰਤ ਮਦਦ ਚਾਹੀਦੀ ਹੈ?')}</strong> ${B('For a medical emergency, call our emergency desk or visit your nearest emergency department.','ਐਮਰਜੈਂਸੀ ਲਈ ਸਾਡੇ ਕਾਊਂਟਰ ਨੂੰ ਫ਼ੋਨ ਕਰੋ ਜਾਂ ਨੇੜੇ ਦੇ ਐਮਰਜੈਂਸੀ ਵਿਭਾਗ ਜਾਓ।')}</p><a href="tel:+911814707700">0181-4707700 ${arrow}</a></div></main>
 <footer><div class="shell footer-grid"><div><a class="brand footer-brand" href="${prefix}"><img src="${prefix}assets/logo.png" alt="NHS Hospital"></a><p>${B('Specialist care. Human connection.\nHere for your next step.','ਮਾਹਿਰਾਂ ਦੀ ਦੇਖਭਾਲ। ਤੁਹਾਡੇ ਅਗਲੇ ਕਦਮ ਲਈ।')}</p><small>Nasa &amp; Hub Superspeciality Hospital</small></div><div><h3>${B('Explore our care','ਸਾਡੇ ਵਿਭਾਗ')}</h3>${definitions.map(d=>`<a href="${prefix}${d[0]}-treatment/">${B(d[1],d[2])}</a>`).join('')}</div><div><h3>${B('Get in touch','ਸੰਪਰਕ ਕਰੋ')}</h3><a href="tel:+911814633333">${B('Appointments','ਮੁਲਾਕਾਤ')}: 0181-4633333</a><a href="tel:+911814707700">${B('Emergency','ਐਮਰਜੈਂਸੀ')}: 0181-4707700</a><a href="mailto:info@nhshospital.in">info@nhshospital.in</a><p>${B('Near Sports College, Kapurthala Chowk,\nJalandhar, Punjab 144001','ਸਪੋਰਟਸ ਕਾਲਜ ਦੇ ਨੇੜੇ, ਕਪੂਰਥਲਾ ਚੌਕ, ਜਲੰਧਰ')}</p></div></div><div class="shell footer-bottom"><p>${B('General health information only. Consult a qualified doctor for diagnosis and treatment. Care is advised individually; outcomes vary.','ਇਹ ਆਮ ਸਿਹਤ ਜਾਣਕਾਰੀ ਹੈ। ਜਾਂਚ ਅਤੇ ਇਲਾਜ ਲਈ ਯੋਗ ਡਾਕਟਰ ਨਾਲ ਸਲਾਹ ਕਰੋ। ਨਤੀਜੇ ਹਰ ਮਰੀਜ਼ ਲਈ ਵੱਖਰੇ ਹੋ ਸਕਦੇ ਹਨ।')}</p><div><span>© 2026 NHS Hospital, Jalandhar</span><a href="${prefix}privacy.html#privacy">${B('Privacy policy','ਪ੍ਰਾਈਵੇਸੀ ਪਾਲਿਸੀ')}</a><a href="${prefix}privacy.html#terms">${B('Terms','ਨਿਯਮ')}</a></div></div></footer><div class="mobile-actions"><a href="tel:+911814633333">${B('Call our team','ਫ਼ੋਨ ਕਰੋ')}</a><a href="#hero-form">${B('Book a consultation','ਸਲਾਹ ਲਈ ਬਿਨਤੀ')} ${arrow}</a></div></body></html>`;
 }
-content.forEach((c,i)=>fs.writeFileSync(path.join(root,c.key+'-treatment/index.html'),page(c,definitions[i])));
+content.forEach((c,i)=>{
+ const html = page(c,definitions[i]);
+ const designed = specialtyDesign(html,c);
+ fs.writeFileSync(path.join(root,c.key+'-treatment/index.html'),designed);
+ fs.mkdirSync(path.join(root,c.key),{recursive:true});
+ fs.writeFileSync(path.join(root,c.key,'index.html'),designed);
+});
 fs.writeFileSync(path.join(root,'index.html'),page(null,null,true));
-fs.mkdirSync(path.join(root,'cardiology'),{recursive:true});
-fs.writeFileSync(path.join(root,'cardiology/index.html'),page(content[0],definitions[0]));
-for(const d of definitions.slice(1)){
- const legacy=path.join(root,d[0]);
- fs.mkdirSync(legacy,{recursive:true});
- const destination=`../${d[0]}-treatment/`;
- fs.writeFileSync(path.join(legacy,'index.html'),`<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${d[1]} | NHS Hospital</title><meta http-equiv="refresh" content="0;url=${destination}"><link rel="canonical" href="https://enquire.nhshospital.in/${d[0]}-treatment/"><script>location.replace(${JSON.stringify(destination)}+location.search+location.hash)</script></head><body><p>This page has moved to <a href="${destination}">NHS Hospital ${d[1]} care</a>.</p></body></html>\n`);
-}
-console.log('Generated hospital landing page, five specialty pages and cardiology alias.');
+console.log('Generated hospital landing page and five specialty pages at both URL paths.');

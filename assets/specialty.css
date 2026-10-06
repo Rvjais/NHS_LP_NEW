@@ -1,0 +1,223 @@
+/* Shared specialty design: the supplied reference's NHS gold, navy, and ivory palette. */
+.specialty-page{--ink:#071f3d;--muted:#465468;--accent:#8b6915;--accent-bright:#e1bd4b;--accent-soft:#fbf5e5;--teal:var(--accent);--gold:#dab43d;--paper:#fff;--line:#e6eaf0;--serif:Georgia,'Times New Roman',serif;background:#fff;color:var(--ink)}
+.specialty-page .shell{width:min(1200px,calc(100% - 72px))}
+.specialty-page h1,.specialty-page h2,.specialty-page h3{letter-spacing:-.025em}
+.specialty-page h2{font-family:var(--serif);font-size:34px;white-space:normal;font-weight:600}
+.specialty-page .eyebrow{color:var(--accent);font-size:12px;letter-spacing:.025em;margin-bottom:10px;font-weight:700}
+.specialty-page .specialty-icon{width:40px;height:40px;flex-shrink:0}
+.specialty-page .button{gap:12px;border-radius:4px;font-size:13px;font-weight:700;min-height:48px;padding:13px 20px;white-space:normal}
+.specialty-page .button .specialty-icon{width:20px;height:20px}
+.specialty-page .primary,.specialty-page .hero .primary,.specialty-page .hero-form .button{background:linear-gradient(135deg,#e7ca6b,var(--gold));border-color:var(--gold);color:var(--ink)}
+.specialty-page .primary:hover,.specialty-page .hero .primary:hover,.specialty-page .hero-form .button:hover{background:#c59b28;border-color:#c59b28}
+.specialty-page :focus-visible{outline-color:var(--accent)}
+.specialty-page .utility{background:#061f3e;color:#fff;letter-spacing:0;font-size:11px}
+.specialty-page .utility .shell{padding-block:9px;gap:16px}
+.specialty-utility-message,.specialty-utility-contact{display:flex;align-items:center;gap:10px}
+.specialty-utility-contact{gap:26px}
+.specialty-page .utility .specialty-icon{width:16px;height:16px}
+.specialty-utility-message>.specialty-icon{color:var(--accent-bright);width:23px!important;height:23px!important}
+.specialty-page header{background:#ffffffed;border-color:#edf0f5}
+.specialty-page .navigation{min-height:96px;gap:25px}
+.specialty-page nav{gap:27px;font-size:12px;font-weight:700;text-transform:uppercase}
+.specialty-page nav a:hover{color:var(--accent)}
+.specialty-home-link{color:var(--accent);position:relative}
+.specialty-home-link::after{content:'';height:2px;background:var(--accent);position:absolute;bottom:0;left:0;right:0}
+.specialty-page .language button[aria-pressed=true]{background:#edf2f8}
+.specialty-page .nav-actions{gap:15px}
+.specialty-page .hero{background:linear-gradient(110deg,#f3f7fb,#e0ebf5);margin:0;border-radius:0;color:var(--ink);overflow:visible;padding-bottom:22px}
+.specialty-page .hero::before{display:none}
+.specialty-hero-photo{position:absolute;inset:0 0 auto auto;width:100%;height:510px;object-fit:cover;object-position:50% 80%}
+.specialty-page .hero-grid{position:relative;display:block;min-height:510px;padding-block:54px 65px}
+.specialty-page .hero-copy{width:48%;max-width:575px}
+.specialty-page .hero h1{font-family:var(--serif);font-size:clamp(42px,4.5vw,64px);line-height:1.1;font-weight:700;letter-spacing:-.035em}
+.specialty-page .hero h1 em{font:inherit;color:var(--accent)}
+.specialty-heartline{display:flex;align-items:center;width:300px;margin:13px 0;color:var(--accent);gap:2px}
+.specialty-heartline::before,.specialty-heartline::after{content:'';height:1px;background:linear-gradient(90deg,var(--accent),transparent);flex:1}
+.specialty-heartline::before{background:linear-gradient(90deg,transparent,var(--accent))}
+.specialty-heartline>.specialty-icon{width:26px;height:26px}
+.specialty-heartline>.specialty-icon:first-of-type,.specialty-heartline>.specialty-icon:last-of-type{width:22px}
+.specialty-page .hero-description{max-width:390px;color:#26364d;font-size:16px;line-height:1.7;margin-top:0}
+.specialty-page .hero-actions{gap:16px;margin-top:21px;flex-wrap:wrap}
+.specialty-page .hero .specialty-outline{background:#ffffff7a;color:var(--ink);border:1px solid #071f3d;gap:22px}
+.specialty-trust{display:flex;align-items:center;gap:20px;margin-top:28px;font-size:11px;line-height:1.4}
+.specialty-trust>div{display:flex;align-items:center;gap:9px;border-right:1px solid #cbd6e2;padding-right:19px}
+.specialty-trust>div:last-child{border:0;padding-right:0}
+.specialty-trust .specialty-icon{width:28px;height:28px}
+.specialty-care{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);margin-top:-27px;background:#fffffff5;border:1px solid #e9edf2;border-radius:20px;padding:26px 0;box-shadow:0 4px 15px #061f3e07}
+.specialty-care-card{padding:0 28px;text-align:center;border-right:1px solid #e3e7ed}
+.specialty-care-card:last-child{border:0}
+.specialty-icon-disc{display:flex;align-items:center;justify-content:center;background:var(--accent-soft);border-radius:50%;width:72px;height:72px;margin:0 auto 13px;color:var(--accent)}
+.specialty-care-card:nth-child(even) .specialty-icon-disc{background:#eef4fb;color:#071f3d}
+.specialty-page .specialty-care-card h2{font-size:20px;line-height:1.2;margin-bottom:10px}
+.specialty-care-card p{font-size:13px;line-height:1.6;max-width:215px;margin-inline:auto}
+.specialty-care-card:hover h2{color:var(--accent)}
+.specialty-callback{position:relative;margin-top:20px}
+.specialty-page .hero-form{margin:0;padding:22px 26px 18px;background:#fff;border-color:#dfe6ee;box-shadow:0 5px 18px #061f3e06;border-radius:12px;scroll-margin-top:125px}
+.specialty-page .hero-form-heading h2{font-size:25px}
+.specialty-page .hero-form-heading .form-kicker{color:var(--accent);font-size:10px;letter-spacing:.07em}
+.specialty-page .hero-form-heading p{font-size:12px;color:#465468}
+.specialty-page .hero-form-fields{grid-template-columns:1fr 1fr 1.25fr auto;gap:12px}
+.specialty-page .hero-field input,.specialty-page .hero-field select,.specialty-page .hero-phone-input{border-color:#d4dce6;font-size:14px}
+.specialty-page .hero-phone-input:focus-within{outline-color:var(--accent)}
+.specialty-page .hero-consent{color:#526076;font-size:11px}
+.specialty-page input[type=checkbox]{accent-color:var(--accent)}
+.specialty-specialist{display:grid;grid-template-columns:1.25fr 1fr;background:#061f3e;border-radius:18px;overflow:hidden;position:relative;color:#fff;margin-top:22px;scroll-margin-top:125px}
+.specialty-specialist-copy{padding:34px 38px;position:relative;z-index:1}
+.specialty-specialist-copy::after{content:'♡';font-family:Georgia,serif;position:absolute;right:15px;top:10px;font-size:250px;line-height:1;color:#ffffff05;z-index:-1}
+.specialty-page .specialty-specialist h2{color:#fff;font-size:34px;line-height:1.15}
+.specialty-specialist .eyebrow{color:var(--accent-bright);font-size:11px}
+.specialty-accent-rule{width:40px;height:2px;background:var(--accent-bright);display:block;margin:14px 0}
+.specialty-specialist-copy>p{font-size:14px;line-height:1.65;color:#e0e7f1;max-width:380px}
+.specialty-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.specialty-proof>div{display:flex;flex-direction:column;gap:5px;border-right:1px solid #ffffff15}
+.specialty-proof>div:last-child{border:0}
+.specialty-proof .specialty-icon{color:var(--accent-bright);width:35px;height:35px;margin-bottom:2px}
+.specialty-proof strong{font-size:16px;font-family:var(--serif);font-weight:400}
+.specialty-proof small{font-size:10px;color:#e0e7f1}
+.specialty-specialist-portrait{background:radial-gradient(ellipse at 50% 30%,#e8eff7,#ccd9e5);position:relative;min-height:355px;overflow:hidden;display:flex;justify-content:center}
+.specialty-specialist-portrait>img{object-fit:contain;object-position:center top;width:100%;height:355px;mix-blend-mode:multiply}
+.specialty-doctor-label{position:absolute;bottom:0;left:0;right:0;padding:34px 24px 18px;background:linear-gradient(transparent,#061f3efa 40%);text-align:center}
+.specialty-doctor-label h3{font-family:var(--serif);font-size:25px;font-weight:600;color:#fff}
+.specialty-doctor-label p{font-size:12px;color:#e0e7f1;margin-top:4px}
+.specialty-doctor-label a{display:inline-flex;align-items:center;gap:9px;font-size:11px;color:#fff;margin-top:9px;text-decoration:underline;text-underline-offset:4px}
+.specialty-doctor-label .specialty-icon{width:16px;height:16px}
+.specialty-page .specialty-services{padding-block:30px 18px}
+.specialty-services .section-heading{justify-content:center;text-align:center;margin-bottom:18px}
+.specialty-page .specialty-services h2{font-size:28px}
+.specialty-services .eyebrow{font-size:11px;margin-bottom:7px}
+.specialty-page .services{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;border:0;background:none;overflow:visible}
+.specialty-page .service-card,.specialty-page .service-card:nth-child(n){padding:20px 15px 16px;border:1px solid #e9edf2;border-radius:10px;background:#fff;text-align:center;align-items:center;box-shadow:0 1px 6px #071f3d05}
+.specialty-page .service-card::before{display:none}
+.specialty-page .service-card>.specialty-icon{color:var(--accent);width:40px;height:40px;margin-bottom:12px}
+.specialty-page .service-card:nth-child(even)>.specialty-icon{color:#071f3d}
+.specialty-page .service-card h3{font-family:var(--body);font-size:14px;font-weight:700;line-height:1.35;min-height:38px;margin-bottom:9px}
+.specialty-page .service-card p{font-size:14px;line-height:1.55}
+.specialty-page .service-card .text-link{margin-top:auto;padding-top:13px;font-size:11px;color:var(--accent);gap:7px}
+.service-card .text-link .specialty-icon{width:15px;height:15px}
+.specialty-reassurance{background:#f2f5fb;border-radius:10px;padding:22px 30px;display:flex;align-items:center;gap:25px}
+.specialty-reassurance>.specialty-icon{color:var(--accent);width:52px;height:52px}
+.specialty-reassurance>div{flex:1}
+.specialty-page .specialty-reassurance h2{font-size:23px;margin-bottom:7px}
+.specialty-reassurance p{font-size:13px;line-height:1.6;max-width:640px}
+.specialty-visit-strip{display:flex;align-items:center;gap:23px;padding-block:22px;border-bottom:1px solid #e6eaf0}
+.specialty-visit-strip .specialty-icon-disc{margin:0;flex-shrink:0;width:58px;height:58px;background:#fff;box-shadow:0 1px 14px #071f3d0e}
+.specialty-page .specialty-visit-strip h2{font-size:22px;line-height:1.2}
+.specialty-visit-strip p{font-size:13px;margin-left:auto}
+.specialty-visit-strip p a{font-weight:700;white-space:nowrap}
+.specialty-page .hospital-section{padding-block:48px}
+.specialty-page .section-heading{gap:35px;margin-bottom:25px}
+.specialty-page .section-heading>p{font-size:14px}
+.specialty-page .hospital-gallery{grid-template-rows:145px 145px}
+.specialty-page .hospital-gallery figure{border-radius:10px}
+.specialty-page .hospital-gallery img{filter:none}
+.specialty-page .gallery-main figcaption{font-size:28px}
+.specialty-page .appointment-section{padding-block:40px;gap:70px;border-top:1px solid #e6eaf0;scroll-margin-top:120px}
+.specialty-page .appointment-copy h2{font-size:40px}
+.specialty-page .appointment-copy h2 em{color:var(--accent)}
+.specialty-page .appointment-phone strong span,.specialty-page .visit-note>span,.specialty-page .faqs summary>span[aria-hidden],.specialty-page .emergency-cross{color:var(--accent)}
+.specialty-page .specialty-expertise{font-size:14px;margin-block:18px;line-height:1.8}
+.specialty-page .appointment-copy>p{font-size:16px}
+.specialty-page .appointment-form{background:#f6f8fc;border:1px solid #e2e8f0;border-radius:12px;box-shadow:none;padding:30px}
+.specialty-page .appointment-form h3{font-family:var(--serif);font-size:30px;font-weight:600}
+.specialty-page .appointment-form>input:not([type=hidden]),.specialty-page .appointment-form select,.specialty-page .phone-input{background:#fff;border-color:#d4dce6}
+.specialty-page .form-kicker{color:var(--accent)}
+.specialty-page .faq-section{grid-template-columns:minmax(0,1fr);gap:22px;padding-block:24px 32px}
+.specialty-page .faq-section h2{font-size:32px}
+.specialty-page .faqs{padding:0 24px;border:1px solid #e2e8f0;border-radius:12px;background:#f8fafc}
+.specialty-page .faqs details{border-bottom:1px solid #e2e8f0}
+.specialty-page .faqs details:first-child{border-top:0}
+.specialty-page .faqs details:last-child{border-bottom:0}
+.specialty-page .faqs summary{font-size:16px;padding-block:18px}
+.specialty-page .faqs details p{max-width:85ch;padding-bottom:18px;line-height:1.75}
+.specialty-page .emergency-note{margin-bottom:35px}
+.specialty-page footer{background:#061f3e;color:#fff;padding-top:35px}
+.specialty-page .footer-grid{gap:65px}
+.specialty-page .footer-grid h3{color:#fff;font-size:12px}
+.specialty-page .footer-grid p,.specialty-page .footer-grid small,.specialty-page .footer-grid>div>a:not(.brand){color:#d7e1ee;font-size:13px}
+.specialty-page .footer-brand{background:transparent;border-radius:0}
+.specialty-page .footer-bottom{border-color:#ffffff1a;margin-top:25px;padding-block:18px;color:#d7e1ee}
+.specialty-page .footer-bottom>p{color:#aabbd0;font-size:11px}
+.specialty-page .mobile-actions a:last-child{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+@media(min-width:1600px){.specialty-page .hero-grid{min-height:550px;padding-block:65px 70px}.specialty-hero-photo{height:550px}}
+@media(max-width:1100px){.specialty-page .shell{width:calc(100% - 48px)}.specialty-page nav{gap:16px;font-size:11px}.specialty-page .navigation{gap:16px}.specialty-trust{gap:12px;font-size:10px}.specialty-trust>div{padding-right:11px;gap:6px}.specialty-page .hero-form-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.specialty-care-card{padding-inline:18px}.specialty-page .services{grid-template-columns:repeat(3,minmax(0,1fr))}.specialty-visit-strip{flex-wrap:wrap}.specialty-visit-strip p{margin-left:0}.specialty-specialist-copy{padding:30px}.specialty-page .specialty-reassurance .button{max-width:200px}}
+@media(max-width:800px){.specialty-page .navigation{min-height:75px}.specialty-page nav{gap:30px;font-size:12px;padding-top:5px}.specialty-page .hero-grid{min-height:460px;padding-block:35px 50px}.specialty-hero-photo{height:460px;object-position:58% center}.specialty-page .hero-copy{width:56%;max-width:450px}.specialty-page .hero h1{font-size:44px}.specialty-page .hero-description{font-size:15px;max-width:330px}.specialty-page .hero-actions{gap:10px}.specialty-page .hero .button{font-size:11px;padding-inline:13px;min-height:44px}.specialty-trust{flex-wrap:wrap;gap:12px;margin-top:20px}.specialty-trust>div{border:0;padding:0}.specialty-trust .specialty-icon{width:24px;height:24px}.specialty-care{padding-block:22px;border-radius:14px}.specialty-care-card{padding-inline:13px}.specialty-page .specialty-care-card h2{font-size:17px}.specialty-care-card p{font-size:12px}.specialty-icon-disc{width:56px;height:56px}.specialty-icon-disc .specialty-icon{width:32px;height:32px}.specialty-specialist{grid-template-columns:1.15fr 1fr}.specialty-specialist-copy{padding:25px}.specialty-page .specialty-specialist h2{font-size:29px}.specialty-proof{gap:10px}.specialty-proof small{font-size:10px}.specialty-specialist-copy>p{font-size:13px}.specialty-doctor-label{padding-inline:14px}.specialty-doctor-label h3{font-size:21px}.specialty-page .specialty-reassurance{gap:15px;padding:20px}.specialty-reassurance>.specialty-icon{width:38px;height:38px}.specialty-page .specialty-reassurance h2{font-size:21px}.specialty-page .specialty-reassurance .button{font-size:11px;max-width:145px;padding-inline:14px}.specialty-page .appointment-section{gap:30px}.specialty-page .appointment-copy h2{font-size:34px}.specialty-page .footer-grid{gap:30px}}
+@media(max-width:600px){.specialty-page .shell{width:calc(100% - 36px)}.specialty-page .utility .shell{justify-content:center}.specialty-page .utility .shell>span{display:none}.specialty-utility-contact{gap:12px;font-size:10px}.specialty-utility-contact .specialty-icon{width:13px!important;height:13px!important}.specialty-page .navigation{gap:5px 12px;padding-bottom:8px}.specialty-page .nav-actions{gap:8px}.specialty-page .small{padding-inline:10px;min-height:38px;font-size:11px;gap:8px}.specialty-page .language button{font-size:11px;padding:4px 5px}.specialty-page nav{gap:20px;font-size:10px;justify-content:space-between}.specialty-page .hero-grid{min-height:0;padding-block:32px 280px}.specialty-page .hero-copy{width:100%;max-width:none}.specialty-page .hero h1{font-size:clamp(36px,9.8vw,53px)}.specialty-page .hero .eyebrow{font-size:10px;margin-bottom:12px}.specialty-page .hero-description{font-size:16px;max-width:440px}.specialty-heartline{width:240px;margin-block:10px}.specialty-page .hero-actions{gap:10px;margin-top:18px}.specialty-page .hero .button{font-size:12px;padding-inline:14px;min-height:46px;gap:9px}.specialty-trust{margin-top:20px;justify-content:space-between;gap:10px;font-size:10px}.specialty-trust>div{gap:5px}.specialty-trust .specialty-icon{width:23px;height:23px}.specialty-hero-photo{inset:auto 0 auto auto;top:330px;height:320px;object-position:92% center;object-fit:cover;width:100%;mask-image:linear-gradient(transparent,#000 18%,#000 88%,transparent)}.specialty-care{grid-template-columns:repeat(2,minmax(0,1fr));padding:0;margin-top:-15px}.specialty-care-card{padding:20px 16px}.specialty-care-card:nth-child(2){border-right:0}.specialty-care-card:nth-child(-n+2){border-bottom:1px solid #e3e7ed}.specialty-page .specialty-care-card h2{font-size:19px}.specialty-care-card p{font-size:13px}.specialty-callback{margin-top:16px}.specialty-page .hero-form{padding:21px 18px}.specialty-page .hero-form-heading{gap:5px}.specialty-page .hero-form-heading p{font-size:13px}.specialty-page .hero-form-fields{grid-template-columns:1fr;gap:13px}.specialty-page .hero-field{font-size:14px}.specialty-page .hero-field input,.specialty-page .hero-field select{font-size:16px}.specialty-page .hero-form .button{font-size:14px}.specialty-page .hero-consent{font-size:12px}.specialty-specialist{grid-template-columns:1fr;margin-top:16px;border-radius:12px}.specialty-specialist-copy{padding:26px 23px}.specialty-page .specialty-specialist h2{font-size:32px}.specialty-specialist-copy>p{font-size:14px}.specialty-proof{gap:15px}.specialty-proof small{font-size:11px}.specialty-specialist-portrait{min-height:340px}.specialty-specialist-portrait>img{height:340px}.specialty-doctor-label h3{font-size:25px}.specialty-doctor-label p{font-size:13px}.specialty-doctor-label a{font-size:13px}.specialty-page .specialty-services{padding-block:28px 18px}.specialty-page .specialty-services h2{font-size:27px;line-height:1.2}.specialty-page .services{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.specialty-page .service-card,.specialty-page .service-card:nth-child(n){padding:20px 13px 16px}.specialty-page .service-card h3{font-size:14px;min-height:0}.specialty-page .service-card p{font-size:14px;line-height:1.6}.specialty-page .service-card .text-link{font-size:12px}.specialty-reassurance{flex-wrap:wrap;padding:21px!important;gap:14px}.specialty-reassurance>div{flex-basis:calc(100% - 52px)}.specialty-page .specialty-reassurance h2{font-size:22px}.specialty-reassurance p{font-size:14px}.specialty-page .specialty-reassurance .button{max-width:none;margin-left:52px;font-size:12px}.specialty-visit-strip{gap:15px;padding-block:22px}.specialty-page .specialty-visit-strip h2{font-size:21px;flex:1}.specialty-visit-strip p{width:100%;font-size:13px}.specialty-visit-strip>.button{width:100%}.specialty-page .hospital-section{padding-block:36px}.specialty-page .section-heading h2{font-size:30px}.specialty-page .section-heading>p{font-size:15px}.specialty-page .hospital-gallery{grid-template-rows:240px 150px}.specialty-page .gallery-main figcaption{font-size:25px}.specialty-page .hospital-gallery figcaption{font-size:12px}.specialty-page .appointment-section{padding-block:35px;gap:27px}.specialty-page .appointment-copy h2{font-size:36px}.specialty-page .appointment-form{padding:25px 20px}.specialty-page .faq-section{padding-block:15px 30px}.specialty-page .faq-section h2{font-size:30px}.specialty-page .faqs summary{font-size:15px}.specialty-page footer{padding-bottom:95px}.specialty-page .footer-grid{gap:30px 20px}.specialty-page .footer-bottom>div{font-size:11px}.specialty-page .footer-grid p,.specialty-page .footer-grid small,.specialty-page .footer-grid>div>a:not(.brand){font-size:12px}.specialty-page .mobile-actions{background:#fffffff5}.specialty-page .mobile-actions a{font-size:12px;border-color:#d4dce6}.specialty-page .hero-form,.specialty-page .specialty-specialist,.specialty-page .appointment-section{scroll-margin-top:140px}}
+/* Flow-based mobile image placement keeps both languages clear of the photograph. */
+@media(max-width:600px){
+ .specialty-page .specialty-hero{display:flex;flex-direction:column}
+ .specialty-page .hero-grid{order:1;padding-block:32px 22px}
+ .specialty-page .specialty-hero-photo{position:relative;inset:auto;top:auto;order:2;width:100%;height:280px;object-fit:cover;object-position:90% 80%;mask-image:none}
+ .specialty-page .specialty-care{order:3;margin-top:-10px}
+ .specialty-page .specialty-callback{order:4}
+}
+/* The taller anatomical teaching models need their own desktop crop. */
+@media(min-width:601px){
+ .specialty-page:not(.cardiology-page) .specialty-hero-photo{width:68%;object-position:100% center;mask-image:linear-gradient(to right,transparent,#000 18%)}
+ .specialty-page:not(.cardiology-page) .hero h1{font-size:clamp(40px,4.1vw,60px)}
+}
+.specialty-page:not(.cardiology-page) .specialty-specialist-copy::after{content:'+';font-family:Arial,sans-serif;right:45px;top:35px;font-size:210px}
+.specialty-page .specialty-doctor-label h3{overflow-wrap:break-word}
+/* A compact logo lockup, pill navigation, and segmented language control. */
+.specialty-page .specialty-header{background:#ffffffed;border-bottom:1px solid #e4eaf2;box-shadow:0 5px 24px #061f3e06;backdrop-filter:blur(20px)}
+.specialty-page .navigation{min-height:100px;padding-block:14px;gap:24px;flex-wrap:nowrap}
+.specialty-brand{display:flex;align-items:center;gap:16px;flex-shrink:0}
+.specialty-page .specialty-brand .brand{width:135px;height:62px}
+.specialty-page .specialty-brand .brand img{width:135px;height:90px;top:-14px}
+.specialty-brand-copy{display:flex;flex-direction:column;justify-content:center;gap:5px;border-left:1px solid #e1e7ef;padding-left:16px}
+.specialty-brand-copy small{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);line-height:1.4}
+.specialty-brand-copy strong{font-size:21px;font-weight:700;letter-spacing:-.02em;line-height:1.25;color:#071f3d;white-space:nowrap}
+.specialty-page .specialty-header nav{width:auto;order:initial;display:flex;align-items:center;justify-content:center;gap:3px;padding:5px;border:1px solid #e8edf4;border-radius:999px;background:#f4f6fa;font-size:13px;font-weight:600;text-transform:none;white-space:nowrap}
+.specialty-page .specialty-header nav a{padding:10px 15px;border-radius:999px;line-height:1.5;transition:color .2s,background .2s,box-shadow .2s}
+.specialty-page .specialty-header nav a:hover{background:#fff;color:var(--accent)}
+.specialty-page .specialty-header nav a[aria-current]{background:var(--accent-soft);color:var(--accent);box-shadow:0 2px 7px #061f3e0c}
+.specialty-page .specialty-home-link::after{display:none}
+.specialty-page .specialty-header .nav-actions{gap:16px;margin-left:0;flex-shrink:0}
+.specialty-page .specialty-header .language{padding:4px;border:1px solid #dfe6ef;border-radius:10px;gap:2px;background:#f6f8fb}
+.specialty-page .specialty-header .language button{min-width:30px;padding:7px 6px;border-radius:6px;color:#718096;font-size:11px;font-weight:600;line-height:1.5;transition:color .2s,background .2s,box-shadow .2s}
+.specialty-page .specialty-header .language button:hover{color:#071f3d}
+.specialty-page .specialty-header .language button[aria-pressed=true]{color:#071f3d;background:#fff;box-shadow:0 1px 5px #061f3e12}
+.specialty-page .specialty-header .specialty-nav-book{min-height:47px;padding:12px 17px;gap:9px;border-radius:9px;font-size:12px;box-shadow:0 5px 13px #a57b1d20}
+.specialty-page .specialty-nav-book>.specialty-icon{width:17px;height:17px}
+.specialty-page .specialty-nav-book>.specialty-icon:last-child{margin-left:6px;width:18px;height:18px}
+.nav-label-short{display:none}
+@media(max-width:1150px){.specialty-brand-copy{display:none}.specialty-page .specialty-header nav a{padding-inline:13px}.specialty-page .specialty-header .nav-actions{gap:12px}}
+@media(max-width:950px){
+ .specialty-page .navigation{min-height:0;flex-wrap:wrap;padding-block:12px;gap:12px 20px}
+ .specialty-page .specialty-header .nav-actions{margin-left:auto}
+ .specialty-page .specialty-header nav{order:3;width:100%;justify-content:space-around;padding:5px;gap:3px}
+ .specialty-page .specialty-header nav a{flex:1;text-align:center;font-size:13px;padding-block:9px}
+}
+@media(max-width:600px){
+ .specialty-page .navigation{padding-block:9px 10px;gap:10px 12px}
+ .specialty-page .specialty-brand .brand{width:108px;height:51px}
+ .specialty-page .specialty-brand .brand img{width:108px;height:72px;top:-10px}
+ .specialty-page .specialty-header .nav-actions{gap:8px}
+ .specialty-page .specialty-header .language{border-radius:8px;padding:3px;gap:0}
+ .specialty-page .specialty-header .language button{min-width:25px;padding:6px 4px;font-size:10px}
+ .specialty-page .specialty-header .specialty-nav-book{min-height:39px;padding:10px 12px;border-radius:8px;font-size:11px}
+ .specialty-page .specialty-nav-book>.specialty-icon{display:none}
+ .specialty-page .specialty-header nav a{font-size:11px;padding:8px 7px}
+ .specialty-page .specialty-header .nav-label-full{display:none}
+ .specialty-page .specialty-header .nav-label-short{display:inline}
+ .specialty-page .hero-form,.specialty-page .specialty-specialist,.specialty-page .appointment-section{scroll-margin-top:150px}
+}
+/* Care highlights and the enquiry form share two desktop columns. */
+.specialty-lead-columns{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr);gap:20px;margin-top:-27px}
+.specialty-lead-columns>.specialty-care,.specialty-lead-columns>.specialty-callback{margin-top:0;min-width:0}
+@media(min-width:901px){
+ .specialty-lead-columns{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:24px;align-items:stretch}
+ .specialty-lead-columns>.specialty-care{grid-template-columns:repeat(2,minmax(0,1fr));padding:0;border-radius:14px;overflow:hidden}
+ .specialty-lead-columns .specialty-care-card{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 22px}
+ .specialty-lead-columns .specialty-care-card:nth-child(2){border-right:0}
+ .specialty-lead-columns .specialty-care-card:nth-child(-n+2){border-bottom:1px solid #e3e7ed}
+ .specialty-lead-columns .specialty-icon-disc{width:60px;height:60px;margin-bottom:12px}
+ .specialty-page .specialty-lead-columns .hero-form{height:100%;padding:24px}
+ .specialty-page .specialty-lead-columns .hero-form-heading{flex-direction:column;align-items:flex-start;gap:6px;margin-bottom:18px}
+ .specialty-page .specialty-lead-columns .hero-form-heading p{text-align:left}
+ .specialty-page .specialty-lead-columns .hero-form-fields{grid-template-columns:minmax(0,1fr);gap:12px}
+ .specialty-page .specialty-lead-columns .hero-form .button{width:100%;margin-top:2px;font-size:14px}
+ .specialty-page .specialty-lead-columns .hero-consent{font-size:12px}
+}
+@media(max-width:600px){.specialty-page .specialty-lead-columns{order:3;margin-top:-10px;gap:16px}}
+@media(max-width:600px){.specialty-page .faq-section{gap:18px}.specialty-page .faqs{padding-inline:16px}}
+@media(prefers-reduced-motion:reduce){.specialty-page .hero-copy>*{animation:none}}
