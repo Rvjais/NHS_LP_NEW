@@ -1,0 +1,55 @@
+.thank-you-page{--ink:#071f3d;--muted:#465468;--paper:#f2f6fb;--line:#dce4ee;background:var(--paper);color:var(--ink)}
+.thank-you-page .shell{width:min(1100px,calc(100% - 48px))}
+.thank-you-page header{position:static;background:#fff;border-bottom:1px solid var(--line)}
+.thank-you-navigation{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:100px;padding-block:12px}
+.thank-you-page .language button{min-width:40px;color:var(--ink);font-size:14px}
+.thank-you-page .language button[aria-pressed=true]{background:#e8eef6}
+.thank-you-main{padding-block:64px 48px}
+.thank-you-confirmation{text-align:center;max-width:840px;margin-inline:auto}
+.thank-you-check{display:grid;place-items:center;width:76px;height:76px;margin:0 auto 24px;background:#fbf3dc;color:#7b5b0e;border:1px solid #ead9a0;border-radius:50%}
+.thank-you-check svg{width:48px;height:48px}
+.thank-you-page .eyebrow{display:block;font-size:14px;color:#7b5b0e;letter-spacing:.06em;margin-bottom:14px}
+.thank-you-page h1,.thank-you-page h2{font-family:Georgia,'Times New Roman',serif;font-weight:600;letter-spacing:-.025em;white-space:normal}
+.thank-you-page h1{font-size:clamp(36px,4.5vw,54px);line-height:1.15;text-wrap:balance}
+.thank-you-intro{font-size:18px;line-height:1.75;max-width:700px;margin:22px auto 14px}
+.thank-you-pending{font-size:16px;font-weight:600;color:var(--ink)}
+.thank-you-actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:28px}
+.thank-you-page .button{font-size:16px;min-height:52px;line-height:1.5;white-space:normal}
+.thank-you-page .primary{background:linear-gradient(135deg,#e7ca6b,#dab43d);color:var(--ink);border-color:#dab43d}
+.thank-you-page .primary:hover{background:#cda632}
+.thank-you-call{background:#fff;border-color:#c1cedf}
+.thank-you-next{margin-top:64px}
+.thank-you-page h2{font-size:30px;line-height:1.25}
+.thank-you-next>h2{text-align:center;margin-bottom:24px}
+.thank-you-steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.thank-you-steps li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px}
+.thank-you-number{font-size:14px;font-weight:700;letter-spacing:.06em;color:#7b5b0e;display:block;margin-bottom:16px}
+.thank-you-steps h3{font-family:var(--body);font-size:18px;font-weight:700;line-height:1.4;letter-spacing:0;margin-bottom:12px}
+.thank-you-steps p{font-size:16px;line-height:1.75}
+.thank-you-emergency{display:flex;align-items:center;gap:28px;background:#e7edf6;border:1px solid #d3ddea;border-radius:12px;margin-top:28px;padding:26px 28px}
+.thank-you-emergency h2{font-size:22px;margin-bottom:8px}
+.thank-you-emergency p{font-size:16px;line-height:1.75;max-width:750px}
+.thank-you-emergency a{font-size:18px;font-weight:700;white-space:nowrap;text-decoration:underline;text-underline-offset:4px}
+.thank-you-page .thank-you-footer{background:#061f3e;padding:30px 0;color:#d7e1ee}
+.thank-you-footer p{font-size:14px;line-height:1.75;color:#d7e1ee;margin-bottom:8px}
+.thank-you-footer p:first-child{font-weight:600;color:#fff;font-size:16px}
+.thank-you-footer .shell>div{display:flex;flex-wrap:wrap;gap:12px 24px;font-size:14px;margin-top:22px}
+.thank-you-footer .shell>div>span{margin-right:auto}
+.thank-you-footer a{text-decoration:underline;text-underline-offset:3px}
+.thank-you-page :focus-visible{outline:3px solid #7b5b0e;outline-offset:4px}
+@media(max-width:800px){.thank-you-steps{grid-template-columns:minmax(0,1fr)}.thank-you-emergency{flex-wrap:wrap;gap:16px}}
+@media(max-width:600px){
+ .thank-you-page .shell{width:calc(100% - 36px)}
+ .thank-you-navigation{min-height:84px;gap:16px}
+ .thank-you-main{padding-block:40px 32px}
+ .thank-you-page h1{font-size:36px}
+ .thank-you-intro{font-size:16px}
+ .thank-you-actions{flex-direction:column;align-items:stretch;gap:12px}
+ .thank-you-page .button{padding:14px 18px}
+ .thank-you-next{margin-top:44px}
+ .thank-you-page h2{font-size:28px}
+ .thank-you-steps li{padding:24px}
+ .thank-you-emergency{padding:24px}
+ .thank-you-emergency h2{font-size:22px}
+ .thank-you-footer .shell>div>span{flex-basis:100%}
+}

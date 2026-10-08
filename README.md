@@ -2,7 +2,7 @@
 
 The hospital home page and five specialty landing pages are static HTML, with shared styling in `assets/landing.css` and language switching in `assets/landing.js`. No build dependencies are required to serve them.
 
-Each specialty is available at both URL paths, such as `cardiology/index.html` and `cardiology-treatment/index.html`. Both versions render the same page.
+Each specialty is available under its treatment path, such as `cardiology-treatment/index.html`.
 
 All five specialties use the reference layout with NHS gold and navy branding in `scripts/specialty-design.cjs` and the scoped `assets/specialty.css`. Specialty headings, visual themes, and service icons are configured in `scripts/specialty-content.cjs`. Each has a generated illustrative hero: a heart, knee joint, urinary system, kidneys, or digestive organs. Specialist profiles use the hospital's existing doctor photographs.
 
@@ -23,7 +23,9 @@ The checks verify page structure, local assets, links, anchors, form endpoints a
 
 ## Appointment enquiries
 
-Each page has a compact form in the hero and a longer form farther down. Both POST to the existing Formester endpoint and use the existing thank-you redirect. They request a callback rather than confirming a booking. The Indian mobile field requires a valid 10-digit number and explicit contact consent.
+Each page has a compact form in the hero and a longer form farther down. Both POST to the existing Formester endpoint and redirect to the matching `thank-you.html`: the home page uses `/thank-you.html`, and specialties use paths such as `/nephrology-treatment/thank-you.html`. Redirects use the existing production origin `https://enquire.nhshospital.in`. They request a callback rather than confirming a booking. The Indian mobile field requires a valid 10-digit number and explicit contact consent.
+
+Thank-you pages use the shared navy and gold design, readable text, English/Punjabi switching, next steps, phone contacts and a link back to the relevant landing page. Generate them and update form redirects with `node scripts/thank-you-pages.cjs`; the main redesign command also calls this generator. These pages are excluded from search indexing.
 
 Phone, email, WhatsApp and privacy links use the existing hospital contact details. End-to-end external form submission is not part of the local checks.
 
