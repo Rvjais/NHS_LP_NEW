@@ -1,0 +1,36 @@
+.whatsapp-cta,.nhs-whatsapp{font-family:"DM Sans","Noto Sans Gurmukhi",Arial,sans-serif}
+.whatsapp-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 18px;border:1px solid #128c4a;border-radius:5px;background:#128c4a;color:#fff;font-size:15px;font-weight:600;line-height:1.5;text-decoration:none;box-sizing:border-box}
+.whatsapp-cta:hover{background:#096b36;border-color:#096b36;color:#fff}
+.whatsapp-cta svg{width:23px;height:23px;flex-shrink:0}
+.hero-actions{flex-wrap:wrap}
+.nhs-whatsapp{position:fixed;right:24px;bottom:24px;z-index:90;color:#18352a;font-size:15px;line-height:1.6}
+.nhs-whatsapp *{box-sizing:border-box}
+.nhs-whatsapp .pa,.whatsapp-cta .pa{display:none}
+html[data-lang="pa"] .nhs-whatsapp .en,html[data-lang="pa"] .whatsapp-cta .en{display:none}
+html[data-lang="pa"] .nhs-whatsapp .pa,html[data-lang="pa"] .whatsapp-cta .pa{display:inline}
+.whatsapp-launcher{display:flex;align-items:center;justify-content:center;width:60px;height:60px;margin-left:auto;border-radius:50%;background:#128c4a;color:#fff;box-shadow:0 8px 24px #062e2433;text-decoration:none}
+.whatsapp-launcher:hover{background:#096b36;color:#fff}
+.whatsapp-launcher svg{width:34px;height:34px}
+.whatsapp-panel{width:340px;max-width:calc(100vw - 32px);margin-bottom:14px;border:1px solid #dbe5de;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 12px 48px #062e2429}
+.whatsapp-panel[hidden]{display:none!important}
+.whatsapp-panel-header{display:flex;align-items:center;gap:12px;padding:20px;background:#075e54;color:#fff}
+.whatsapp-avatar{display:flex;align-items:center;justify-content:center;width:42px;height:42px;flex-shrink:0;border-radius:50%;background:#ffffff18}
+.whatsapp-avatar svg{width:29px;height:29px}
+.whatsapp-panel h2{margin:0;font-family:inherit;font-size:17px;font-weight:700;line-height:1.4;color:inherit}
+.whatsapp-panel-header p{margin:3px 0 0;font-size:13px;line-height:1.5;color:#e0eee7}
+.whatsapp-close{display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;margin-left:auto;flex-shrink:0;border:0;border-radius:50%;background:transparent;color:#fff;font-size:28px;cursor:pointer}
+.whatsapp-close:hover{background:#ffffff18}
+.whatsapp-panel-body{padding:24px;background:#f0f6f1}
+.whatsapp-panel-body p{margin:0 0 12px;font-size:15px;line-height:1.6;color:#314a3e}
+.whatsapp-panel-body p:first-child{font-weight:700;color:#18352a}
+.whatsapp-panel-body .whatsapp-cta{width:100%;margin-top:6px}
+.whatsapp-panel-body small{display:block;margin-top:12px;font-size:12px;line-height:1.5;color:#586b60;text-align:center}
+.whatsapp-cta:focus-visible,.whatsapp-launcher:focus-visible,.whatsapp-close:focus-visible{outline:3px solid #d4ae4d;outline-offset:4px}
+@media(max-width:600px){
+ .nhs-whatsapp{right:16px;bottom:calc(20px + env(safe-area-inset-bottom))}
+ .home-page .nhs-whatsapp,.specialty-page .nhs-whatsapp{bottom:calc(96px + env(safe-area-inset-bottom))}
+ .whatsapp-launcher{width:54px;height:54px}
+ .whatsapp-panel{max-height:calc(100dvh - 200px);overflow-y:auto}
+ .whatsapp-panel-header{padding:14px 16px}
+ .whatsapp-panel-body{padding:20px}
+}

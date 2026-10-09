@@ -1,6 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const root = path.join(__dirname, '..');
+const {cta: whatsappCta, addWidget} = require('./whatsapp.cjs');
 const B = (en, pa) => `<span class="en">${en}</span><span class="pa" lang="pa">${pa}</span>`;
 const specialties = [
  ['cardiology', 'Cardiology', 'ਦਿਲ ਦੀ ਦੇਖਭਾਲ'],
@@ -14,7 +15,7 @@ const thankYouUrl = route => `https://enquire.nhshospital.in/${route ? route + '
 function page(specialty) {
  const prefix = specialty ? '../' : './';
  const department = specialty ? B(specialty[1], specialty[2]) : B('NHS Hospital · Jalandhar', 'NHS ਹਸਪਤਾਲ · ਜਲੰਧਰ');
- return `<!DOCTYPE html>
+ return addWidget(`<!DOCTYPE html>
 <html lang="en" data-lang="en">
 <head>
  <meta charset="utf-8">
@@ -49,6 +50,7 @@ function page(specialty) {
    <div class="thank-you-actions">
     <a class="button primary" href="./index.html">${B(specialty ? 'Back to ' + specialty[1] : 'Back to our hospital', specialty ? 'ਵਿਭਾਗ ਦੇ ਪੰਨੇ ’ਤੇ ਵਾਪਸ ਜਾਓ' : 'ਹਸਪਤਾਲ ਦੇ ਪੰਨੇ ’ਤੇ ਵਾਪਸ ਜਾਓ')} <span aria-hidden="true">↗</span></a>
     <a class="button thank-you-call" href="tel:+911814633333">${B('Call our team', 'ਸਾਡੀ ਟੀਮ ਨੂੰ ਫ਼ੋਨ ਕਰੋ')} · 0181-4633333</a>
+    ${whatsappCta(specialty ? specialty[1] : null)}
    </div>
   </section>
   <section class="thank-you-next" aria-labelledby="next-title">
@@ -64,7 +66,7 @@ function page(specialty) {
  <footer class="thank-you-footer"><div class="shell"><p>${B('Nasa &amp; Hub Superspeciality Hospital', 'NHS ਹਸਪਤਾਲ')}</p><p>${B('Near Sports College, Kapurthala Chowk, Jalandhar, Punjab 144001', 'ਸਪੋਰਟਸ ਕਾਲਜ ਦੇ ਨੇੜੇ, ਕਪੂਰਥਲਾ ਚੌਕ, ਜਲੰਧਰ, ਪੰਜਾਬ 144001')}</p><div><span>© 2026 NHS Hospital</span><a href="${prefix}privacy.html#privacy">${B('Privacy policy', 'ਪ੍ਰਾਈਵੇਸੀ ਪਾਲਿਸੀ')}</a><a href="${prefix}privacy.html#terms">${B('Terms', 'ਨਿਯਮ')}</a></div></div></footer>
 </body>
 </html>
-`;
+`,specialty ? specialty[1] : null,prefix);
 }
 
 function generateThankYouPages() {

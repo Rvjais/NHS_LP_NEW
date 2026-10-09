@@ -1,6 +1,6 @@
 # NHS landing pages
 
-The hospital home page and five specialty landing pages are static HTML, with shared styling in `assets/landing.css` and language switching in `assets/landing.js`. No build dependencies are required to serve them.
+The hospital home page and five specialty landing pages are static HTML, with shared styling in `assets/landing.css` and language switching in `assets/landing.js`. No build dependencies are required to serve them. All six landing pages include Google Tag Manager container `GTM-TB5M43ZD`, with the script near the top of the head and its noscript iframe immediately after the opening body tag.
 
 Each specialty is available under its treatment path, such as `cardiology-treatment/index.html`.
 
@@ -23,10 +23,12 @@ The checks verify page structure, local assets, links, anchors, form endpoints a
 
 ## Appointment enquiries
 
-Each page has a compact form in the hero and a longer form farther down. Both POST to the existing Formester endpoint and redirect to the matching `thank-you.html`: the home page uses `/thank-you.html`, and specialties use paths such as `/nephrology-treatment/thank-you.html`. Redirects use the existing production origin `https://enquire.nhshospital.in`. They request a callback rather than confirming a booking. The Indian mobile field requires a valid 10-digit number and explicit contact consent.
+Each page has a compact form in the hero and a longer form farther down. Both POST to the existing Formester endpoint and redirect to the matching `thank-you.html`: the home page uses `/thank-you.html`, and specialties use paths such as `/nephrology-treatment/thank-you.html`. Redirects use the existing production origin `https://enquire.nhshospital.in`. They request a callback rather than confirming a booking. The Indian mobile field requires a valid 10-digit number. Both forms submit without a consent checkbox.
 
 Thank-you pages use the shared navy and gold design, readable text, English/Punjabi switching, next steps, phone contacts and a link back to the relevant landing page. Generate them and update form redirects with `node scripts/thank-you-pages.cjs`; the main redesign command also calls this generator. These pages are excluded from search indexing.
 
 Phone, email, WhatsApp and privacy links use the existing hospital contact details. End-to-end external form submission is not part of the local checks.
 
-On specialty pages, both logos and navigation links stay within the current page. Footer links point to the page's sections, the WhatsApp website link is replaced by a callback link, and the existing privacy policy and terms open in local dialogs. Phone and email actions remain available, along with the existing enquiry submission service.
+On specialty pages, both logos and navigation links stay within the current page. Footer links point to the page's sections, and the existing privacy policy and terms open in local dialogs. Phone and email actions remain available, along with the existing enquiry submission service.
+
+All landing pages, thank-you pages and the privacy page have WhatsApp CTA buttons and a floating widget using the WhatsApp number `+91 95178 04633`. Specialty messages include the department name. The shared markup is in `scripts/whatsapp.cjs`, with styling and interaction in `assets/whatsapp.css` and `assets/whatsapp.js`. The widget supports English/Punjabi, keyboard controls and dismissal, and sits above the mobile action bar. Without JavaScript, its floating link opens WhatsApp directly.

@@ -58,7 +58,7 @@ async function main() {
    }
   }
  }
- const checks=await evaluate(`(()=>{const results=[...document.forms].map(f=>{const name=f.querySelector('[name="patient_name"]');const mobile=f.querySelector('[name="mobile"]');const problem=f.querySelector('[name="problem"]');const consent=f.querySelector('[name="consent"]');const empty=!f.checkValidity();name.value='Preview check';mobile.value='123';problem.selectedIndex=1;consent.checked=true;const badMobile=!f.checkValidity();mobile.value='9876543210';const valid=f.checkValidity();consent.checked=false;const consentRequired=!f.checkValidity();f.reset();return {empty,badMobile,valid,consentRequired}});const faq=document.querySelector('details');faq.querySelector('summary').click();return {forms:results,faq:faq.open};})()`);
+ const checks=await evaluate(`(()=>{const results=[...document.forms].map(f=>{const name=f.querySelector('[name="patient_name"]');const mobile=f.querySelector('[name="mobile"]');const problem=f.querySelector('[name="problem"]');const noCheckbox=f.querySelector('[type="checkbox"]')===null;const empty=!f.checkValidity();name.value='Preview check';mobile.value='123';problem.selectedIndex=1;const badMobile=!f.checkValidity();mobile.value='9876543210';const valid=f.checkValidity();f.reset();return {empty,badMobile,valid,noCheckbox}});const faq=document.querySelector('details');faq.querySelector('summary').click();return {forms:results,faq:faq.open};})()`);
  if(!checks.faq||checks.forms.some(form=>Object.values(form).some(v=>!v)))failures.push(checks);
  console.log('Form validation and FAQ:',JSON.stringify(checks));
  await send('Emulation.setDeviceMetricsOverride',{width:1440,height:1000,deviceScaleFactor:1,mobile:false});

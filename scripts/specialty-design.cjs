@@ -89,7 +89,6 @@ module.exports = function specialtyDesign(base, c) {
  base = base.replace('<div class="visit-note">', `<p class="specialty-expertise">${c.paragraphs[2]}</p><div class="visit-note">`);
  base = base.replace('<a class="brand footer-brand" href="../">','<a class="brand footer-brand" href="#main" aria-label="NHS Hospital — back to top">');
  base = base.replace(/<div><h3><span class="en">Explore our care<\/span>[\s\S]*?<\/div>/, `<div><h3>${B('On this page','ਇਸ ਪੰਨੇ ਉੱਤੇ')}</h3><a href="#treatments">${B('Treatments','ਇਲਾਜ')}</a><a href="#doctor">${B('Your specialist','ਤੁਹਾਡਾ ਮਾਹਿਰ')}</a><a href="#hospital">${B('Our hospital','ਸਾਡਾ ਹਸਪਤਾਲ')}</a><a href="#hero-form">${B('Request a callback','ਕਾਲ ਲਈ ਬਿਨਤੀ')}</a><a href="#faq">${B('Frequently asked questions','ਆਮ ਸਵਾਲ')}</a></div>`);
- base = base.replace(/<a class="text-link" href="https:\/\/wa\.me\/[^\"]*"[^>]*>[\s\S]*?<\/a>/, `<a class="text-link" href="#hero-form">${B('Request a callback','ਕਾਲ ਲਈ ਬਿਨਤੀ')}${icon('arrow')}</a>`);
  base = base.replaceAll('href="../privacy.html#privacy"','href="#privacy"').replaceAll('href="../privacy.html#terms"','href="#terms"');
  base = base.replace('</body>',`${legalDialogs}<script src="../assets/specialty-navigation.js" defer></script></body>`);
  base = base.replace(`class="${c.key}-page"`, `class="${c.key}-page specialty-page"`);

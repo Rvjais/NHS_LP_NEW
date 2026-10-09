@@ -19,11 +19,17 @@ for(const file of [...landingFiles,...thankYouFiles]){
  const forms=[...s.matchAll(/<form\b[^>]*>[\s\S]*?<\/form>/g)].map(m=>m[0]);
  const thankYou=thankYouFiles.includes(file);
  if(!thankYou && forms.length!==2)failures.push(`${file}: expected hero and lower-page forms`);
- if(!thankYou && (!forms[0]?.includes('id="hero-form"')||!forms[0]?.includes('name="consent"')))failures.push(`${file}: incomplete hero form`);
+ if(!thankYou && !forms[0]?.includes('id="hero-form"'))failures.push(`${file}: incomplete hero form`);
+ if(!thankYou){
+  const head=s.match(/<head>[\s\S]*?<\/head>/)?.[0]||'';
+  if((head.match(/GTM-TB5M43ZD/g)||[]).length!==1||!head.includes('https://www.googletagmanager.com/gtm.js?id='))failures.push(`${file}: missing or duplicate GTM script`);
+  if(!/<body\b[^>]*>\s*<!-- Google Tag Manager \(noscript\) -->\s*<noscript><iframe src="https:\/\/www\.googletagmanager\.com\/ns\.html\?id=GTM-TB5M43ZD"/.test(s))failures.push(`${file}: missing GTM noscript immediately after body`);
+  if(/<input\b[^>]*type="checkbox"/.test(s)||forms.some(form=>form.includes('name="consent"')))failures.push(`${file}: unexpected consent checkbox or field`);
+ }
  if(thankYou && (!s.includes('noindex, follow')||!s.includes('Your appointment will be confirmed by our team.')))failures.push(`${file}: incomplete confirmation page`);
  for(const form of forms){
   if(!form.includes('action="https://app.formester.com/forms/xh1pxuMQJ/submissions"'))failures.push(`${file}: missing Formester action`);
-  for(const name of ['patient_name','mobile','problem','department','_redirect','consent'])if(!form.includes(`name="${name}"`))failures.push(`${file}: missing ${name} in a form`);
+  for(const name of ['patient_name','mobile','problem','department','_redirect'])if(!form.includes(`name="${name}"`))failures.push(`${file}: missing ${name} in a form`);
   const key=content.find(c=>file.startsWith(c.key+'/'))?.key;
   const route=key?key+'-treatment':path.dirname(file)==='.'?'':path.dirname(file);
   if(!form.includes(`name="_redirect" value="${thankYouUrl(route)}"`))failures.push(`${file}: wrong thank-you destination`);
